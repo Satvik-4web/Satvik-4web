@@ -1,0 +1,45 @@
+name: Update Profile System Monitor
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # Daily at 02:00 UTC
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - 'scripts/**'
+      - 'templates/**'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate System Monitor SVGs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/generate-monitor.mjs
+
+      - name: Commit changes if telemetry changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/monitor*.svg
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: refresh system monitor"
+            git push origin master
+          else
+            echo "No telemetry changes detected. Skipping commit."
+          fi

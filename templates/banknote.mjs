@@ -1,0 +1,210 @@
+import { fontStack } from './colors.mjs';
+
+export function renderBanknoteSvg(theme) {
+  const t = theme;
+  const isDark = t.name === 'dark';
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="100%" height="360">
+  <defs>
+    <linearGradient id="bnAccentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="${t.accentCyan}"/>
+      <stop offset="100%" stop-color="${t.accentViolet}"/>
+    </linearGradient>
+    <filter id="bnShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="${t.shadow}"/>
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: ${fontStack}; }
+    @media (prefers-reduced-motion: no-preference) {
+      /* Morphing/refining decision boundary line */
+      .boundary-path {
+        animation: refineBoundary 9s ease-in-out infinite;
+      }
+      /* Comparison label cycle */
+      .label-eval     { animation: showEval 9s step-end infinite; }
+      .label-refine   { animation: showRefine 9s step-end infinite; }
+      .label-selected { animation: showSelected 9s step-end infinite; }
+    }
+    @keyframes refineBoundary {
+      0%, 30% {
+        d: path("M 40 180 Q 140 140 190 100 T 320 30");
+        stroke: ${t.accentAmber};
+      }
+      35%, 65% {
+        d: path("M 40 195 Q 120 160 180 120 T 320 20");
+        stroke: ${t.accentCyan};
+      }
+      70%, 100% {
+        d: path("M 40 205 Q 110 175 175 130 T 320 15");
+        stroke: ${t.accentGreen};
+      }
+    }
+    @keyframes showEval {
+      0%, 32%   { opacity: 1; }
+      33%, 100% { opacity: 0; }
+    }
+    @keyframes showRefine {
+      0%, 32%   { opacity: 0; }
+      33%, 67%  { opacity: 1; }
+      68%, 100% { opacity: 0; }
+    }
+    @keyframes showSelected {
+      0%, 67%   { opacity: 0; }
+      68%, 100% { opacity: 1; }
+    }
+  </style>
+
+  <!-- Window Container -->
+  <rect x="8" y="8" width="784" height="344" rx="12" fill="${t.cardBg}" stroke="${t.border}" stroke-width="1" filter="url(#bnShadow)"/>
+
+  <!-- Title Bar -->
+  <path d="M 8 20 A 12 12 0 0 1 20 8 L 780 8 A 12 12 0 0 1 792 20 L 792 44 L 8 44 Z" fill="${t.titleBarBg}" stroke="${t.border}" stroke-width="1"/>
+  <circle cx="28" cy="26" r="5" fill="${t.dotRed}"/>
+  <circle cx="44" cy="26" r="5" fill="${t.dotYellow}"/>
+  <circle cx="60" cy="26" r="5" fill="${t.dotGreen}"/>
+  
+  <text x="80" y="30" class="mono" font-size="12" fill="${t.textMuted}">proc://banknote-classifier [PID 1280] — Satvik-4web/banknote-authentication</text>
+  
+  <!-- Status Badge BUILT -->
+  <rect x="696" y="16" width="82" height="20" rx="10" fill="${isDark ? 'rgba(79, 140, 255, 0.15)' : 'rgba(37, 99, 235, 0.12)'}" stroke="${t.accentBlue}" stroke-width="1"/>
+  <circle cx="710" cy="26" r="3.5" fill="${t.accentBlue}"/>
+  <text x="742" y="30" class="mono" font-size="10.5" font-weight="700" fill="${t.accentBlue}" text-anchor="middle">BUILT</text>
+
+  <!-- Left Column: Description and Highlights -->
+  <g transform="translate(28, 64)">
+    <text class="mono" font-size="19" font-weight="700" fill="${t.textPrimary}">Banknote Authentication</text>
+    <text x="274" y="-2" class="mono" font-size="11" font-weight="600" fill="${t.accentCyan}">"ML Models"</text>
+
+    <!-- One-line Description -->
+    <text y="28" class="mono" font-size="11" fill="${t.textSecondary}">
+      <tspan x="0" dy="0">Compares multiple classification algorithms on statistical</tspan>
+      <tspan x="0" dy="16">features from banknote images to determine the optimal model.</tspan>
+    </text>
+
+    <!-- Key Capabilities List -->
+    <g transform="translate(0, 72)">
+      <text class="mono" font-size="10.5" fill="${t.accentCyan}">▸</text>
+      <text x="16" class="mono" font-size="10.5" fill="${t.textPrimary}">Statistical wavelet feature extraction &amp; analysis</text>
+
+      <text y="20" class="mono" font-size="10.5" fill="${t.accentViolet}">▸</text>
+      <text x="16" y="20" class="mono" font-size="10.5" fill="${t.textPrimary}">Multi-classifier evaluation: SVM, Trees, Logistic, KNN</text>
+
+      <text y="40" class="mono" font-size="10.5" fill="${t.accentGreen}">▸</text>
+      <text x="16" y="40" class="mono" font-size="10.5" fill="${t.textPrimary}">Confusion matrix analysis &amp; boundary refinement</text>
+
+      <text y="60" class="mono" font-size="10.5" fill="${t.accentBlue}">▸</text>
+      <text x="16" y="60" class="mono" font-size="10.5" fill="${t.textPrimary}">Reproducible evaluation pipeline in Scikit-learn</text>
+    </g>
+
+    <!-- Tech Tags Row -->
+    <g transform="translate(0, 162)">
+      <rect width="68" height="20" rx="4" fill="${t.tagBg}" stroke="${t.border}" stroke-width="1"/>
+      <text x="34" y="14" class="mono" font-size="10" fill="${t.tagText}" text-anchor="middle">Python</text>
+
+      <rect x="74" width="96" height="20" rx="4" fill="${t.tagBg}" stroke="${t.border}" stroke-width="1"/>
+      <text x="122" y="14" class="mono" font-size="10" fill="${t.tagText}" text-anchor="middle">scikit-learn</text>
+
+      <rect x="176" width="68" height="20" rx="4" fill="${t.tagBg}" stroke="${t.border}" stroke-width="1"/>
+      <text x="210" y="14" class="mono" font-size="10" fill="${t.tagText}" text-anchor="middle">Pandas</text>
+
+      <rect x="250" width="60" height="20" rx="4" fill="${t.tagBg}" stroke="${t.border}" stroke-width="1"/>
+      <text x="280" y="14" class="mono" font-size="10" fill="${t.tagText}" text-anchor="middle">NumPy</text>
+
+      <rect x="316" width="42" height="20" rx="4" fill="${t.tagBg}" stroke="${t.border}" stroke-width="1"/>
+      <text x="337" y="14" class="mono" font-size="9.5" fill="${t.tagText}" text-anchor="middle">ML</text>
+    </g>
+
+    <!-- Footer CLI Link hint -->
+    <g transform="translate(0, 204)">
+      <rect width="350" height="26" rx="5" fill="${t.panelBgSubtle}" stroke="${t.border}" stroke-width="1"/>
+      <text x="10" y="17" class="mono" font-size="10" fill="${t.textMuted}">$ python evaluate_models.py</text>
+      <text x="340" y="17" class="mono" font-size="10" font-weight="700" fill="${t.accentCyan}" text-anchor="end">MODELS ↗</text>
+    </g>
+  </g>
+
+  <!-- Right Column: Micro-Visual (Scatter Plot + Decision Boundary + Model Comparison) -->
+  <g transform="translate(404, 58)">
+    <rect width="372" height="280" rx="8" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1"/>
+
+    <!-- Header bar -->
+    <rect x="12" y="12" width="348" height="24" rx="4" fill="${t.panelBgSubtle}"/>
+    <text x="22" y="28" class="mono" font-size="10" font-weight="600" fill="${t.textSecondary}">FEATURE SCATTER &amp; CLASSIFIER</text>
+    <text x="350" y="28" class="mono" font-size="9.5" fill="${t.accentCyan}" text-anchor="end">2D EMBEDDING</text>
+
+    <!-- Scatter Plot Plane -->
+    <g transform="translate(18, 48)">
+      <!-- Axes -->
+      <line x1="24" y1="16" x2="24" y2="150" stroke="${t.border}" stroke-width="1.5"/>
+      <line x1="24" y1="150" x2="330" y2="150" stroke="${t.border}" stroke-width="1.5"/>
+      
+      <!-- Axis Labels -->
+      <text x="330" y="162" class="mono" font-size="8" fill="${t.textMuted}" text-anchor="end">VARIANCE →</text>
+      <text x="20" y="12" class="mono" font-size="8" fill="${t.textMuted}">↑ SKEWNESS</text>
+
+      <!-- Grid lines -->
+      <line x1="24" y1="105" x2="330" y2="105" stroke="${t.gridLine}" stroke-width="1" stroke-dasharray="2 2"/>
+      <line x1="24" y1="60" x2="330" y2="60" stroke="${t.gridLine}" stroke-width="1" stroke-dasharray="2 2"/>
+      <line x1="126" y1="16" x2="126" y2="150" stroke="${t.gridLine}" stroke-width="1" stroke-dasharray="2 2"/>
+      <line x1="228" y1="16" x2="228" y2="150" stroke="${t.gridLine}" stroke-width="1" stroke-dasharray="2 2"/>
+
+      <!-- Cluster 1: Genuine Banknotes (Cyan ● lower left/middle) -->
+      <g fill="${t.accentCyan}">
+        <circle cx="50" cy="135" r="3.5" opacity="0.85"/>
+        <circle cx="68" cy="122" r="3.5" opacity="0.85"/>
+        <circle cx="75" cy="140" r="3.5" opacity="0.85"/>
+        <circle cx="95" cy="115" r="3.5" opacity="0.85"/>
+        <circle cx="110" cy="132" r="3.5" opacity="0.85"/>
+        <circle cx="120" cy="100" r="3.5" opacity="0.85"/>
+        <circle cx="138" cy="118" r="3.5" opacity="0.85"/>
+        <circle cx="150" cy="92"  r="3.5" opacity="0.85"/>
+        <circle cx="165" cy="128" r="3.5" opacity="0.85"/>
+        <circle cx="180" cy="108" r="3.5" opacity="0.85"/>
+        <circle cx="205" cy="120" r="3.5" opacity="0.85"/>
+      </g>
+
+      <!-- Cluster 2: Forged Banknotes (Violet ▲ upper right) -->
+      <g fill="${t.accentViolet}">
+        <polygon points="175,45 178,52 172,52" opacity="0.85"/>
+        <polygon points="195,65 198,72 192,72" opacity="0.85"/>
+        <polygon points="210,38 213,45 207,45" opacity="0.85"/>
+        <polygon points="228,58 231,65 225,65" opacity="0.85"/>
+        <polygon points="245,30 248,37 242,37" opacity="0.85"/>
+        <polygon points="255,50 258,57 252,57" opacity="0.85"/>
+        <polygon points="270,25 273,32 267,32" opacity="0.85"/>
+        <polygon points="285,42 288,49 282,49" opacity="0.85"/>
+        <polygon points="295,60 298,67 292,67" opacity="0.85"/>
+        <polygon points="310,32 313,39 307,39" opacity="0.85"/>
+      </g>
+
+      <!-- Dynamic Decision Boundary Line (Refining over time) -->
+      <path class="boundary-path" d="M 40 195 Q 120 160 180 120 T 320 20" fill="none" stroke="${t.accentCyan}" stroke-width="2.5" stroke-dasharray="4 2"/>
+    </g>
+
+    <!-- Legend and Status (Bottom) -->
+    <g transform="translate(14, 212)">
+      <rect width="344" height="54" rx="6" fill="${t.panelBgSubtle}" stroke="${t.border}" stroke-width="1"/>
+      
+      <!-- Cluster Legend -->
+      <circle cx="16" cy="18" r="3.5" fill="${t.accentCyan}"/>
+      <text x="26" y="21" class="mono" font-size="8.5" fill="${t.textSecondary}">Genuine (Class 0)</text>
+
+      <polygon points="140,14 144,22 136,22" fill="${t.accentViolet}"/>
+      <text x="150" y="21" class="mono" font-size="8.5" fill="${t.textSecondary}">Forged (Class 1)</text>
+
+      <!-- Boundary legend line -->
+      <line x1="260" y1="18" x2="278" y2="18" stroke="${t.accentGreen}" stroke-width="2"/>
+      <text x="284" y="21" class="mono" font-size="8.5" fill="${t.textSecondary}">Boundary</text>
+
+      <!-- Ticking Model Comparison Status -->
+      <g transform="translate(10, 36)">
+        <text class="mono label-eval" font-size="9" font-weight="700" fill="${t.accentAmber}">STATUS: [ model comparison : evaluating classifiers... ]</text>
+        <text class="mono label-refine" font-size="9" font-weight="700" fill="${t.accentCyan}">STATUS: [ model comparison : boundary optimizing... ]</text>
+        <text class="mono label-selected" font-size="9" font-weight="700" fill="${t.accentGreen}">STATUS: [ model comparison : optimal model verified ]</text>
+      </g>
+    </g>
+  </g>
+</svg>`;
+}

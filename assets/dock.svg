@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100" width="100%" height="100">
+  <defs>
+    <filter id="dockShadow" x="-5%" y="-10%" width="110%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="rgba(0, 0, 0, 0.45)"/>
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .dock-icon {
+      transition: transform 0.3s ease;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .icon-0 { animation: dockWave 5s ease-in-out 0.0s infinite; }
+      .icon-1 { animation: dockWave 5s ease-in-out 0.4s infinite; }
+      .icon-2 { animation: dockWave 5s ease-in-out 0.8s infinite; }
+      .icon-3 { animation: dockWave 5s ease-in-out 1.2s infinite; }
+      .icon-4 { animation: dockWave 5s ease-in-out 1.6s infinite; }
+      .icon-5 { animation: dockWave 5s ease-in-out 2.0s infinite; }
+      .icon-6 { animation: dockWave 5s ease-in-out 2.4s infinite; }
+      .icon-7 { animation: dockWave 5s ease-in-out 2.8s infinite; }
+      .icon-8 { animation: dockWave 5s ease-in-out 3.2s infinite; }
+      .icon-9 { animation: dockWave 5s ease-in-out 3.6s infinite; }
+    }
+    @keyframes dockWave {
+      0%, 100% { transform: scale(1.0); }
+      15%      { transform: scale(1.22); filter: drop-shadow(0 0 6px #22D3EE); }
+      30%      { transform: scale(1.0); }
+    }
+  </style>
+
+  <!-- Dock Outer Frame -->
+  <rect x="70" y="16" width="660" height="68" rx="16" fill="#11161D" stroke="#1F293B" stroke-width="1" filter="url(#dockShadow)"/>
+  <rect x="74" y="20" width="652" height="60" rx="12" fill="#0E131B" opacity="0.6"/>
+
+  <!-- Dock Top Indicator -->
+  <text x="400" y="12" class="mono" font-size="9" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1.5">SATVIK-OS // CORE RUNTIME DOCK</text>
+
+  <!-- 10 Tech Icons (Monochrome Vector Glyphs with Staggered Magnify) -->
+
+  <!-- 0: Python (Center ~105, 50) -->
+  <g class="dock-icon icon-0" style="transform-origin: 105px 50px;">
+    <g transform="translate(90, 35)">
+      <!-- Python glyph -->
+      <path d="M 14.5 0 C 7.5 0 8 3.2 8 3.2 L 8 6.5 L 15 6.5 L 15 7.5 L 4.8 7.5 C 4.8 7.5 0 6.9 0 14 C 0 21 4.2 20.7 4.2 20.7 L 6.8 20.7 L 6.8 17.5 C 6.8 17.5 6.6 13.8 10.5 13.8 L 17.4 13.8 C 17.4 13.8 21.2 13.9 21.2 10.2 L 21.2 3.5 C 21.2 3.5 21.8 0 14.5 0 Z M 10.2 2.2 C 10.9 2.2 11.5 2.8 11.5 3.5 C 11.5 4.2 10.9 4.8 10.2 4.8 C 9.5 4.8 8.9 4.2 8.9 3.5 C 8.9 2.8 9.5 2.2 10.2 2.2 Z" fill="#F1F5F9"/>
+      <path d="M 15.5 30 C 22.5 30 22 26.8 22 26.8 L 22 23.5 L 15 23.5 L 15 22.5 L 25.2 22.5 C 25.2 22.5 30 23.1 30 16 C 30 9 25.8 9.3 25.8 9.3 L 23.2 9.3 L 23.2 12.5 C 23.2 12.5 23.4 16.2 19.5 16.2 L 12.6 16.2 C 12.6 16.2 8.8 16.1 8.8 19.8 L 8.8 26.5 C 8.8 26.5 8.2 30 15.5 30 Z M 19.8 27.8 C 19.1 27.8 18.5 27.2 18.5 26.5 C 18.5 25.8 19.1 25.2 19.8 25.2 C 20.5 25.2 21.1 25.8 21.1 26.5 C 21.1 27.2 20.5 27.8 19.8 27.8 Z" fill="#94A3B8"/>
+    </g>
+    <text x="105" y="78" class="mono" font-size="7.5" fill="#64748B" text-anchor="middle">Python</text>
+  </g>
+
+  <!-- 1: TypeScript (Center ~170, 50) -->
+  <g class="dock-icon icon-1" style="transform-origin: 170px 50px;">
+    <g transform="translate(155, 35)">
+      <rect width="30" height="30" rx="5" fill="#0E131B" stroke="#1F293B" stroke-width="1"/>
+      <path d="M 7 11 L 17 11 M 12 11 L 12 23" stroke="#F1F5F9" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 24 13 C 22 11.5 19 12 19 14.5 C 19 18 24 16.5 24 20 C 24 22.5 21 23 19 22" fill="none" stroke="#F1F5F9" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="170" y="78" class="mono" font-size="7.5" fill="#64748B" text-anchor="middle">TS</text>
+  </g>
+
+  <!-- 2: C++ (Center ~235, 50) -->
+  <g class="dock-icon icon-2" style="transform-origin: 235px 50px;">
+    <g transform="translate(220, 35)">
+      <circle cx="15" cy="15" r="14" fill="#0E131B" stroke="#1F293B" stroke-width="1"/>
+      <path d="M 12 10 A 6 6 0 1 0 12 20" fill="none" stroke="#F1F5F9" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 17 15 L 21 15 M 19 13 L 19 17" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M 23 15 L 27 15 M 25 13 L 25 17" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+    <text x="235" y="78" class="mono" font-size="7.5" fill="#64748B" text-anchor="middle">C++</text>
+  </g>
+
+  <!-- 3: React (Center ~300, 50) -->
+  <g class="dock-icon icon-3" style="transform-origin: 300px 50px;">
+    <g transform="translate(285, 35)">
+      <circle cx="15" cy="15" r="3" fill="#F1F5F9"/>
+      <ellipse cx="15" cy="15" rx="13" ry="5" fill="none" stroke="#F1F5F9" stroke-width="1.4" transform="rotate(0 15 15)"/>
+      <ellipse cx="15" cy="15" rx="13" ry="5" fill="none" stroke="#94A3B8" stroke-width="1.4" transform="rotate(60 15 15)"/>
+      <ellipse cx="15" cy="15" rx="13" ry="5" fill="none" stroke="#22D3EE" stroke-width="1.4" transform="rotate(120 15 15)"/>
+    </g>
+    <text x="300" y="78" class="mono" font-size="7.5" fill="#64748B" text-anchor="middle">React</text>
+  </g>
+
+  <!-- 4: Next.js (Center ~365, 50) -->
+  <g class="dock-icon icon-4" style="transform-origin: 365px 50px;">
+    <g transform="translate(350, 35)">
+      <circle cx="15" cy="15" r="14" fill="#0E131B" stroke="#1F293B" stroke-width="1"/>
+      <path d="M 10 22 L 10 9 M 10 9 L 21 23 M 20 9 L 20 16" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="365" y="78" class="mono" font-size="7.5" fill="#64748B" text-anchor="middle">Next.js</text>
+  </g>
+
+  <!-- 5: Node.js (Center ~430, 50) -->
+  <g class="dock-icon icon-5" style="transform-origin: 430px 50px;">
+    <g transform="translate(415, 35)">
+      <!-- Hexagon -->
+      <polygon points="15,2 27,9 27,22 15,29 3,22 3,9" fill="#0E131B" stroke="#1F293B" stroke-width="1"/>
+      <path d="M 15 7 L 23 12 L 23 20 L 15 25 L 7 20 L 7 12 Z" fill="none" stroke="#10B981" stroke-width="1.5"/>
+      <path d="M 11 14 C 11 12 19 12 19 16 C 19 20 11 18 11 21" fill="none" stroke="#F1F5F9" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <text x="430" y="78" class="mono" font-size="7.5" fill="#64748B" text-anchor="middle">Node</text>
+  </g>
+
+  <!-- 6: Laravel (Center ~495, 50) -->
+  <g class="dock-icon icon-6" style="transform-origin: 495px 50px;">
+    <g transform="translate(480, 35)">
+      <!-- Stylized Laravel L-cube ribbon -->
+      <path d="M 5 21 L 15 26 L 25 21 L 25 10 L 15 5 L 5 10 Z" fill="#0E131B" stroke="#1F293B" stroke-width="1"/>
+      <path d="M 15 5 L 15 26 M 5 10 L 15 15 L 25 10" fill="none" stroke="#EF4444" stroke-width="1.4"/>
+      <path d="M 10 12.5 L 10 18 L 15 20.5" fill="none" stroke="#F1F5F9" stroke-width="1.5"/>
+    </g>
+    <text x="495" y="78" class="mono" font-size="7.5" fill="#64748B" text-anchor="middle">Laravel</text>
+  </g>
+
+  <!-- 7: PostgreSQL (Center ~560, 50) -->
+  <g class="dock-icon icon-7" style="transform-origin: 560px 50px;">
+    <g transform="translate(545, 35)">
+      <circle cx="15" cy="15" r="14" fill="#0E131B" stroke="#1F293B" stroke-width="1"/>
+      <path d="M 8 18 C 8 13 11 9 17 9 C 23 9 24 13 24 15 C 24 19 20 22 17 22 C 14 22 12 21 12 21 L 11 25" fill="none" stroke="#4F8CFF" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="14" cy="13" r="1.5" fill="#F1F5F9"/>
+    </g>
+    <text x="560" y="78" class="mono" font-size="7.5" fill="#64748B" text-anchor="middle">Postgres</text>
+  </g>
+
+  <!-- 8: Redis (Center ~625, 50) -->
+  <g class="dock-icon icon-8" style="transform-origin: 625px 50px;">
+    <g transform="translate(610, 35)">
+      <!-- Layered rhombus stack -->
+      <polygon points="15,4 27,9 15,14 3,9" fill="#0E131B" stroke="#EF4444" stroke-width="1.2"/>
+      <polygon points="15,11 27,16 15,21 3,16" fill="#0E131B" stroke="#94A3B8" stroke-width="1.2"/>
+      <polygon points="15,18 27,23 15,28 3,23" fill="#0E131B" stroke="#F1F5F9" stroke-width="1.2"/>
+    </g>
+    <text x="625" y="78" class="mono" font-size="7.5" fill="#64748B" text-anchor="middle">Redis</text>
+  </g>
+
+  <!-- 9: Git (Center ~690, 50) -->
+  <g class="dock-icon icon-9" style="transform-origin: 690px 50px;">
+    <g transform="translate(675, 35)">
+      <rect x="3" y="3" width="24" height="24" rx="4" transform="rotate(45 15 15)" fill="#0E131B" stroke="#1F293B" stroke-width="1"/>
+      <circle cx="10" cy="15" r="2.5" fill="#F59E0B"/>
+      <circle cx="20" cy="10" r="2.5" fill="#F1F5F9"/>
+      <circle cx="20" cy="20" r="2.5" fill="#F59E0B"/>
+      <path d="M 10 15 L 20 20 M 13 16.5 L 20 10" stroke="#F1F5F9" stroke-width="1.4"/>
+    </g>
+    <text x="690" y="78" class="mono" font-size="7.5" fill="#64748B" text-anchor="middle">Git</text>
+  </g>
+</svg>
