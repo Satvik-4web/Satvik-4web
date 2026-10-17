@@ -2,31 +2,31 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { renderColdOpenSvg } from '../templates/cold-open.mjs';
-import { renderSynopsisSvg } from '../templates/synopsis.mjs';
-import { renderPosterNextimeSvg } from '../templates/poster-nextime.mjs';
-import { renderPosterStudentManagementSvg } from '../templates/poster-student-management.mjs';
-import { renderPosterWasteManagementSvg } from '../templates/poster-waste-management.mjs';
-import { renderPosterCampusverseSvg } from '../templates/poster-campusverse.mjs';
-import { renderPosterBanknoteSvg } from '../templates/poster-banknote.mjs';
-import { renderCreditsSvg } from '../templates/credits.mjs';
-import { renderProductionStatsSvg, DEFAULT_STATS } from '../templates/production-stats.mjs';
-import { renderEndCardSvg } from '../templates/end-card.mjs';
+import { renderWhoamiSvg } from '../templates/whoami.mjs';
+import { renderProjectsLsSvg } from '../templates/projects-ls.mjs';
+import { renderCardNextimeSvg } from '../templates/card-nextime.mjs';
+import { renderCardStudentManagementSvg } from '../templates/card-student-management.mjs';
+import { renderCardWasteManagementSvg } from '../templates/card-waste-management.mjs';
+import { renderCardCampusVerseSvg } from '../templates/card-campusverse.mjs';
+import { renderCardBanknoteSvg } from '../templates/card-banknote.mjs';
+import { renderHtopSvg, DEFAULT_HTOP_DATA } from '../templates/htop.mjs';
+import { renderGitlogSvg, DEFAULT_COMMITS } from '../templates/gitlog.mjs';
+import { renderExitSvg } from '../templates/exit.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 const assetsDir = path.join(rootDir, 'assets');
-const postersDir = path.join(assetsDir, 'posters');
+const cardsDir = path.join(assetsDir, 'cards');
 
 // Load theme config
 const configPath = path.join(rootDir, 'theme.config.json');
 const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 const { themes } = config;
 
-// Ensure output directories exist
+// Ensure directories exist
 fs.mkdirSync(assetsDir, { recursive: true });
-fs.mkdirSync(postersDir, { recursive: true });
+fs.mkdirSync(cardsDir, { recursive: true });
 
 function writeAssetPair(basePath, renderFn, extraArg = undefined) {
   const darkContent = renderFn(themes.dark, config, extraArg);
@@ -47,28 +47,28 @@ function writeAssetPair(basePath, renderFn, extraArg = undefined) {
   console.log(`✓ ${path.relative(rootDir, lightPath)} (${lightSizeKb} KB)`);
 }
 
-console.log('Building "THE TITLE SEQUENCE" cinematic profile assets...\n');
+console.log('Building "TMUX SESSION" terminal profile assets...\n');
 
-// 1. Cold Open Hero
-writeAssetPair(path.join(assetsDir, 'cold-open'), renderColdOpenSvg);
+// 1. Pane 1: whoami Hero
+writeAssetPair(path.join(assetsDir, 'whoami'), renderWhoamiSvg);
 
-// 2. Synopsis
-writeAssetPair(path.join(assetsDir, 'synopsis'), renderSynopsisSvg);
+// 2. Pane 2: projects-ls Directory
+writeAssetPair(path.join(assetsDir, 'projects-ls'), renderProjectsLsSvg);
 
-// 3. Project Posters
-writeAssetPair(path.join(postersDir, 'nextime'), renderPosterNextimeSvg);
-writeAssetPair(path.join(postersDir, 'student-management'), renderPosterStudentManagementSvg);
-writeAssetPair(path.join(postersDir, 'waste-management'), renderPosterWasteManagementSvg);
-writeAssetPair(path.join(postersDir, 'campusverse'), renderPosterCampusverseSvg);
-writeAssetPair(path.join(postersDir, 'banknote'), renderPosterBanknoteSvg);
+// 3. Project Cards
+writeAssetPair(path.join(cardsDir, 'nextime'), renderCardNextimeSvg);
+writeAssetPair(path.join(cardsDir, 'student-management'), renderCardStudentManagementSvg);
+writeAssetPair(path.join(cardsDir, 'waste-management'), renderCardWasteManagementSvg);
+writeAssetPair(path.join(cardsDir, 'campusverse'), renderCardCampusVerseSvg);
+writeAssetPair(path.join(cardsDir, 'banknote'), renderCardBanknoteSvg);
 
-// 4. End Credits
-writeAssetPair(path.join(assetsDir, 'credits'), renderCreditsSvg);
+// 4. Pane 3: htop System Monitor (baseline)
+writeAssetPair(path.join(assetsDir, 'htop'), renderHtopSvg, DEFAULT_HTOP_DATA);
 
-// 5. Behind the Scenes (Production Stats baseline)
-writeAssetPair(path.join(assetsDir, 'production-stats'), renderProductionStatsSvg, DEFAULT_STATS);
+// 5. Pane 4: gitlog Graph (baseline)
+writeAssetPair(path.join(assetsDir, 'gitlog'), renderGitlogSvg, DEFAULT_COMMITS);
 
-// 6. End Card
-writeAssetPair(path.join(assetsDir, 'end-card'), renderEndCardSvg);
+// 6. Pane 5: exit Footer
+writeAssetPair(path.join(assetsDir, 'exit'), renderExitSvg);
 
-console.log('\nAll cinematic static assets built successfully.');
+console.log('\nAll terminal session static assets built successfully.');

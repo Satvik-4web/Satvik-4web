@@ -1,4 +1,4 @@
-name: Update Production Stats
+name: Update Terminal Telemetry
 
 on:
   schedule:
@@ -16,7 +16,7 @@ permissions:
   contents: write
 
 jobs:
-  refresh-stats:
+  refresh-telemetry:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -35,19 +35,20 @@ jobs:
             npm install
           fi
 
-      - name: Generate Production Stats SVGs
+      - name: Generate Dynamic Telemetry SVGs (htop & gitlog)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          node scripts/generate-stats.mjs
+          node scripts/generate-htop.mjs
+          node scripts/generate-gitlog.mjs
 
-      - name: Commit changes if production stats changed
+      - name: Commit changes if telemetry changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/production-stats*.svg
+          git add assets/htop*.svg assets/gitlog*.svg
           if ! git diff --staged --quiet; then
-            git commit -m "chore: refresh production stats"
+            git commit -m "chore: refresh terminal telemetry"
             git push origin master
           else
             echo "No telemetry changes detected. Skipping commit."

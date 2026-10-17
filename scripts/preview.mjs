@@ -10,11 +10,11 @@ const rootDir = path.resolve(__dirname, '..');
 // Helper to convert README.md to HTML for local preview
 function markdownToHtml(md, theme) {
   const isDark = theme === 'dark';
-  const bg = isDark ? '#080808' : '#F6F1E9';
-  const text = isDark ? '#EDE6D8' : '#141210';
-  const link = isDark ? '#C8A15B' : '#9A722C';
-  const border = isDark ? '#21201D' : '#DDD5C7';
-  const codeBg = isDark ? '#141414' : '#F0EAE0';
+  const bg = isDark ? '#0A0E14' : '#FAF8F2';
+  const text = isDark ? '#C9D1D9' : '#1F2430';
+  const link = isDark ? '#5EEAD4' : '#0F9D8A';
+  const border = isDark ? '#1E2733' : '#E3DED2';
+  const codeBg = isDark ? '#0F141C' : '#FFFFFF';
 
   // Replace <picture> with the matching theme source for local preview rendering
   let html = md.replace(/<picture>[\s\S]*?<\/picture>/g, (match) => {
@@ -30,10 +30,10 @@ function markdownToHtml(md, theme) {
   });
 
   // Basic markdown conversions
-  html = html.replace(/^### (.*$)/gim, '<h3 style="margin-top: 20px; margin-bottom: 8px; color: ' + text + '; font-family: ui-sans-serif, system-ui, sans-serif;">$1</h3>');
-  html = html.replace(/^## (.*$)/gim, '<h2 style="margin-top: 28px; margin-bottom: 12px; color: ' + text + '; font-family: ui-sans-serif, system-ui, sans-serif;">$1</h2>');
+  html = html.replace(/^### (.*$)/gim, '<h3 style="margin-top: 20px; margin-bottom: 8px; color: ' + text + '; font-family: ui-monospace, monospace;">$1</h3>');
+  html = html.replace(/^## (.*$)/gim, '<h2 style="margin-top: 28px; margin-bottom: 12px; color: ' + text + '; font-family: ui-monospace, monospace;">$1</h2>');
   html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-  html = html.replace(/`([^`]+)`/g, '<code style="background: ' + codeBg + '; padding: 2px 6px; border-radius: 4px; font-family: ui-monospace, monospace; font-size: 85%;">$1</code>');
+  html = html.replace(/`([^`]+)`/g, '<code style="background: ' + codeBg + '; padding: 2px 6px; border-radius: 4px; font-family: ui-monospace, monospace; font-size: 85%; border: 1px solid ' + border + ';">$1</code>');
   html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color: ' + link + '; text-decoration: none;">$1</a>');
   html = html.replace(/---/g, `<hr style="border: 0; border-top: 1px solid ${border}; margin: 32px 0;">`);
 
@@ -42,7 +42,7 @@ function markdownToHtml(md, theme) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Satvik Cinematic Title Sequence Preview - ${theme}</title>
+  <title>Satvik Tmux Session Terminal Preview - ${theme}</title>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -50,7 +50,7 @@ function markdownToHtml(md, theme) {
       padding: 32px 16px;
       background-color: ${bg};
       color: ${text};
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size: 14px;
       line-height: 1.6;
     }
@@ -64,12 +64,12 @@ function markdownToHtml(md, theme) {
     code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
     details {
       border: 1px solid ${border};
-      border-radius: 6px;
+      border-radius: 8px;
       padding: 16px 20px;
       background: ${codeBg};
       margin-top: 24px;
     }
-    summary { cursor: pointer; font-weight: 600; color: ${link}; font-family: ui-sans-serif, system-ui, sans-serif; }
+    summary { cursor: pointer; font-weight: 600; color: ${link}; font-family: ui-monospace, monospace; }
     ul { padding-left: 20px; }
     li { margin-bottom: 8px; }
   </style>
