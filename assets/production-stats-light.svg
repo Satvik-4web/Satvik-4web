@@ -117,7 +117,7 @@
       <rect x="0" y="0" width="346" height="110" rx="3" fill="#FFFFFF" stroke="#DDD5C7" stroke-width="1"/>
       <rect x="0" y="0" width="4" height="110" fill="#9A722C"/>
       <text class="sans-track" x="24" y="28" font-size="9" font-weight="600" fill="#9C9485">TAKES THIS MONTH</text>
-      <text class="serif-num" x="24" y="72" font-size="40" fill="#9A722C">24 <tspan font-size="16" class="sans-track">COMMITS</tspan></text>
+      <text class="serif-num" x="24" y="72" font-size="40" fill="#9A722C">23 <tspan font-size="16" class="sans-track">COMMITS</tspan></text>
       <text class="sans-track" x="24" y="96" font-size="8.5" fill="#686154">PAST 30 DAYS REEL VELOCITY</text>
     </g>
 
@@ -146,20 +146,20 @@
       
       <g transform="translate(90, 65)">
         <text class="sans-track" x="0" y="0" font-size="10.5" font-weight="600" fill="#141210">Python</text>
-        <text class="sans-track" x="180" y="0" font-size="10.5" fill="#9A722C">27.9%</text>
+        <text class="sans-track" x="180" y="0" font-size="10.5" fill="#9A722C">28.0%</text>
         
         <!-- Track -->
         <rect x="250" y="-10" width="660" height="8" rx="4" fill="#F0EAE0" stroke="#DDD5C7" stroke-width="0.75"/>
         
         <!-- Animated Fill Bar -->
-        <rect x="250" y="-10" width="184" height="8" rx="4" fill="url(#goldGrad)" opacity="0.9">
-          <animate attributeName="width" from="0" to="184" dur="1.2s" begin="0.15s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
+        <rect x="250" y="-10" width="185" height="8" rx="4" fill="url(#goldGrad)" opacity="0.9">
+          <animate attributeName="width" from="0" to="185" dur="1.2s" begin="0.15s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
         </rect>
       </g>
     
       <g transform="translate(90, 101)">
         <text class="sans-track" x="0" y="0" font-size="10.5" font-weight="600" fill="#141210">TypeScript</text>
-        <text class="sans-track" x="180" y="0" font-size="10.5" fill="#9A722C">26.3%</text>
+        <text class="sans-track" x="180" y="0" font-size="10.5" fill="#9A722C">26.4%</text>
         
         <!-- Track -->
         <rect x="250" y="-10" width="660" height="8" rx="4" fill="#F0EAE0" stroke="#DDD5C7" stroke-width="0.75"/>
@@ -172,27 +172,27 @@
     
       <g transform="translate(90, 137)">
         <text class="sans-track" x="0" y="0" font-size="10.5" font-weight="600" fill="#141210">JavaScript</text>
-        <text class="sans-track" x="180" y="0" font-size="10.5" fill="#9A722C">18.5%</text>
+        <text class="sans-track" x="180" y="0" font-size="10.5" fill="#9A722C">18.2%</text>
         
         <!-- Track -->
         <rect x="250" y="-10" width="660" height="8" rx="4" fill="#F0EAE0" stroke="#DDD5C7" stroke-width="0.75"/>
         
         <!-- Animated Fill Bar -->
-        <rect x="250" y="-10" width="122" height="8" rx="4" fill="url(#goldGrad)" opacity="0.9">
-          <animate attributeName="width" from="0" to="122" dur="1.2s" begin="0.35s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
+        <rect x="250" y="-10" width="120" height="8" rx="4" fill="url(#goldGrad)" opacity="0.9">
+          <animate attributeName="width" from="0" to="120" dur="1.2s" begin="0.35s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
         </rect>
       </g>
     
       <g transform="translate(90, 173)">
         <text class="sans-track" x="0" y="0" font-size="10.5" font-weight="600" fill="#141210">C#</text>
-        <text class="sans-track" x="180" y="0" font-size="10.5" fill="#9A722C">10.6%</text>
+        <text class="sans-track" x="180" y="0" font-size="10.5" fill="#9A722C">10.7%</text>
         
         <!-- Track -->
         <rect x="250" y="-10" width="660" height="8" rx="4" fill="#F0EAE0" stroke="#DDD5C7" stroke-width="0.75"/>
         
         <!-- Animated Fill Bar -->
-        <rect x="250" y="-10" width="70" height="8" rx="4" fill="url(#goldGrad)" opacity="0.9">
-          <animate attributeName="width" from="0" to="70" dur="1.2s" begin="0.45000000000000007s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
+        <rect x="250" y="-10" width="71" height="8" rx="4" fill="url(#goldGrad)" opacity="0.9">
+          <animate attributeName="width" from="0" to="71" dur="1.2s" begin="0.45000000000000007s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
         </rect>
       </g>
     
