@@ -63,7 +63,7 @@
     <g transform="translate(0, 72)">
       <rect width="320" height="64" rx="8" fill="#161D27" stroke="#1F293B" stroke-width="1"/>
       <text x="16" y="24" class="mono" font-size="9.5" fill="#64748B" letter-spacing="0.5">COMMITS (LAST 30 DAYS)</text>
-      <text x="16" y="50" class="mono" font-size="22" font-weight="700" fill="#10B981">16</text>
+      <text x="16" y="50" class="mono" font-size="22" font-weight="700" fill="#10B981">17</text>
       <text x="70" y="50" class="mono" font-size="10.5" fill="#94A3B8">pushed across branches</text>
     </g>
 
