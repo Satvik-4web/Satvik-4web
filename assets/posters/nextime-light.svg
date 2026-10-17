@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="700" role="img" aria-label="Poster and scene illustration for NexTime: student operating system with live timetable and attendance">
+  <title>NexTime — Feature Poster</title>
+  <defs>
+    
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9A722C"/>
+      <stop offset="50%" stop-color="#BA8E3D"/>
+      <stop offset="100%" stop-color="#9A722C"/>
+    </linearGradient>
+
+    <linearGradient id="flareGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0"/>
+      <stop offset="30%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="fadeMaskGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Subtle filmic grain -->
+    <filter id="filmGrain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="2" result="noise"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.025 0"/>
+    </filter>
+  
+  </defs>
+
+  <style>
+    .sans-track {
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+    .serif-tagline {
+      font-family: ui-serif, "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      font-style: italic;
+      fill: #686154;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      /* Gold "now" scanner hairline */
+      .scan-line {
+        animation: sweepHairline 8s ease-in-out infinite;
+      }
+      /* Active block highlight */
+      .active-slot {
+        animation: slotGlow 8s ease-in-out infinite;
+      }
+      /* Label cycle NEXT -> NOW -> DONE */
+      .tag-next { animation: showNext 8s step-end infinite; }
+      .tag-now  { animation: showNow 8s step-end infinite; }
+      .tag-done { animation: showDone 8s step-end infinite; }
+      /* Attendance ring fill */
+      .ring-fill {
+        stroke-dasharray: 251;
+        stroke-dashoffset: 251;
+        animation: fillRing 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      /* Pomodoro arc */
+      .arc-focus {
+        stroke-dasharray: 251;
+        stroke-dashoffset: 251;
+        animation: focusLoop 8s ease-in-out infinite;
+      }
+    }
+    @keyframes sweepHairline {
+      0%   { transform: translateX(0px); opacity: 0; }
+      10%  { opacity: 1; }
+      85%  { opacity: 1; }
+      95%  { transform: translateX(540px); opacity: 0; }
+      100% { transform: translateX(0px); opacity: 0; }
+    }
+    @keyframes slotGlow {
+      0%, 25%  { stroke: rgba(154, 114, 44, 0.18); fill: transparent; }
+      35%, 65% { stroke: #9A722C; fill: rgba(154, 114, 44, 0.18); }
+      75%, 100%{ stroke: rgba(154, 114, 44, 0.18); fill: transparent; }
+    }
+    @keyframes showNext {
+      0%, 28%  { opacity: 1; }
+      29%, 100%{ opacity: 0; }
+    }
+    @keyframes showNow {
+      0%, 28%  { opacity: 0; }
+      29%, 74% { opacity: 1; }
+      75%, 100%{ opacity: 0; }
+    }
+    @keyframes showDone {
+      0%, 74%  { opacity: 0; }
+      75%, 100%{ opacity: 1; }
+    }
+    @keyframes fillRing {
+      to { stroke-dashoffset: 35; } /* ~86% */
+    }
+    @keyframes focusLoop {
+      0%   { stroke-dashoffset: 251; }
+      50%  { stroke-dashoffset: 62; }
+      100% { stroke-dashoffset: 251; }
+    }
+  </style>
+
+  
+    <!-- Letterbox Base Surface -->
+    <rect width="1200" height="700" fill="#F6F1E9"/>
+
+    <!-- Top & Bottom Cinematic Letterbox Bars -->
+    <rect x="0" y="0" width="1200" height="49" fill="#EAE3D6"/>
+    <rect x="0" y="651" width="1200" height="49" fill="#EAE3D6"/>
+    <line x1="0" y1="49" x2="1200" y2="49" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+    <line x1="0" y1="651" x2="1200" y2="651" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+
+    <!-- Inset Hairline Frame -->
+    <rect x="24" y="24" width="1152" height="652" fill="none" stroke="rgba(154, 114, 44, 0.45)" stroke-width="1"/>
+
+    <!-- Corner Registration Marks -->
+    <!-- Top-Left -->
+    <path d="M 16 24 L 32 24 M 24 16 L 24 32" stroke="#9A722C" stroke-width="1"/>
+    <!-- Top-Right -->
+    <path d="M 1168 24 L 1184 24 M 1176 16 L 1176 32" stroke="#9A722C" stroke-width="1"/>
+    <!-- Bottom-Left -->
+    <path d="M 16 676 L 32 676 M 24 668 L 24 684" stroke="#9A722C" stroke-width="1"/>
+    <!-- Bottom-Right -->
+    <path d="M 1168 676 L 1184 676 M 1176 668 L 1176 684" stroke="#9A722C" stroke-width="1"/>
+
+    <!-- Subtle Film Grain Overlay -->
+    <rect width="1200" height="700" filter="url(#filmGrain)" pointer-events="none"/>
+  
+
+  <!-- Poster Header -->
+  <g transform="translate(60, 68)">
+    <text class="sans-track" x="0" y="0" font-size="10" fill="#9C9485">PRODUCTION 01 &#8226; TIME ARCHITECTURE</text>
+    <rect x="940" y="-12" width="140" height="20" fill="none" stroke="#9A722C" stroke-width="1"/>
+    <text class="sans-track" x="1010" y="2" font-size="9" font-weight="600" fill="#9A722C" text-anchor="middle">&#9679; LIVE IN RELEASE</text>
+  </g>
+
+  <!-- Title & Tagline -->
+  <g transform="translate(0, 0)">
+    <path d="M66.86 108.14 C66.86 111.98 64.86 114.35 61.73 114.35 C61.51 114.35 61.51 115.00 61.73 115.00 L67.72 114.89 C69.72 114.89 71.39 115.00 72.96 115.00 C73.12 115.00 73.12 114.35 72.96 114.35 C70.15 114.35 68.48 111.98 68.48 108.14 L68.48 87.14 L93.80 115.97 C93.91 116.08 94.40 116.03 94.40 115.81 L94.40 88.16 C94.40 84.33 96.18 81.90 99.04 81.90 C99.20 81.90 99.20 81.25 99.04 81.25 C97.48 81.25 95.53 81.41 93.59 81.41 C91.59 81.41 89.92 81.25 88.35 81.25 C88.19 81.25 88.19 81.90 88.35 81.90 C91.16 81.90 92.83 84.33 92.83 88.16 L92.83 105.60 L74.15 84.06 C72.42 82.01 72.37 81.25 71.45 81.25 C70.31 81.25 68.10 81.36 65.51 81.36 L61.19 81.25 C61.03 81.25 61.03 81.90 61.19 81.90 C62.92 81.90 64.43 82.60 66.86 85.30 M117.90 115.00 L141.77 115.00 C142.42 115.00 142.58 114.78 142.58 114.19 C142.58 111.76 142.85 108.63 143.12 106.52 C143.12 106.36 142.53 106.20 142.47 106.41 C140.91 111.27 137.61 113.49 132.00 113.49 L130.22 113.49 C128.49 113.49 127.73 112.52 127.73 110.41 L127.73 98.21 L132.16 98.21 C136.48 98.21 138.75 100.04 138.75 102.96 C138.75 103.12 139.40 103.12 139.40 102.96 C139.40 100.91 139.23 99.29 139.23 97.45 L139.29 92.59 C139.29 92.37 138.69 92.37 138.69 92.59 C138.69 95.13 136.48 96.69 132.21 96.69 L127.73 96.69 L127.73 85.68 C127.73 83.73 128.70 82.82 130.86 82.82 L132.48 82.82 C136.97 82.82 139.61 84.76 140.80 88.97 C140.91 89.19 141.45 89.08 141.45 88.92 L141.34 81.74 C141.34 81.41 141.23 81.25 140.80 81.25 L117.90 81.25 C117.69 81.25 117.69 81.90 117.90 81.90 C121.20 81.90 121.74 82.55 121.74 85.62 L121.74 110.63 C121.74 113.76 121.20 114.35 117.90 114.35 C117.69 114.35 117.69 115.00 117.90 115.00 M183.31 115.00 C185.31 115.00 187.53 114.89 190.60 114.89 C192.76 114.89 194.65 115.00 196.27 115.00 C196.49 115.00 196.49 114.35 196.27 114.35 C193.84 114.35 192.06 113.22 190.28 110.52 L181.05 96.21 L186.18 89.19 C189.96 84.00 193.30 81.90 195.41 81.90 C195.63 81.90 195.63 81.25 195.41 81.25 C193.57 81.25 192.66 81.41 190.60 81.41 C187.53 81.41 186.01 81.25 183.91 81.25 C183.75 81.25 183.75 81.90 183.91 81.90 C187.42 81.90 187.63 84.54 184.61 88.86 L180.29 95.02 L173.16 84.06 C171.97 82.22 173.11 81.90 174.51 81.90 C174.67 81.90 174.67 81.25 174.51 81.25 C172.51 81.25 169.81 81.41 166.74 81.41 C165.28 81.41 163.60 81.25 162.15 81.25 C161.93 81.25 161.93 81.90 162.15 81.90 C164.14 81.90 165.82 83.09 167.82 86.22 L176.46 99.66 L170.95 107.12 C167.17 112.30 163.82 114.35 161.77 114.35 C161.55 114.35 161.55 115.00 161.77 115.00 C163.60 115.00 164.52 114.89 166.57 114.89 C169.65 114.89 171.16 115.00 173.27 115.00 C173.43 115.00 173.43 114.35 173.27 114.35 C169.76 114.35 169.54 111.71 172.57 107.44 L177.21 100.80 L184.61 112.25 C185.74 113.97 184.66 114.35 183.31 114.35 C183.10 114.35 183.10 115.00 183.31 115.00 M224.42 82.49 C226.48 82.49 226.91 83.25 226.91 85.62 L226.91 110.63 C226.91 113.76 226.15 114.35 222.37 114.35 C222.16 114.35 222.16 115.00 222.37 115.00 C224.42 115.00 227.02 114.89 229.88 114.89 C232.90 114.89 235.39 115.00 237.44 115.00 C237.65 115.00 237.65 114.35 237.44 114.35 C233.55 114.35 232.96 113.76 232.96 110.63 L232.96 85.73 C232.96 83.25 233.39 82.49 235.55 82.49 C239.76 82.49 242.95 85.14 244.03 90.81 C244.08 91.02 244.62 91.02 244.62 90.81 C244.62 88.97 244.89 82.28 245.16 79.90 C245.16 79.63 244.57 79.63 244.51 79.90 C244.13 81.03 242.89 81.25 240.30 81.25 C237.49 81.25 234.90 81.41 229.88 81.41 C225.83 81.41 222.10 81.36 219.02 81.25 C218.00 81.25 215.95 81.14 215.95 80.06 C215.95 79.68 215.35 79.74 215.35 80.06 C215.35 82.71 214.81 88.81 214.60 90.81 C214.60 91.02 215.14 91.08 215.19 90.86 C216.97 85.57 220.00 82.49 224.42 82.49 M275.42 110.63 L275.42 85.73 C275.42 82.65 275.96 81.90 279.25 81.90 C279.47 81.90 279.47 81.25 279.25 81.25 C277.41 81.25 275.09 81.41 272.34 81.41 C269.75 81.41 267.32 81.25 265.43 81.25 C265.26 81.25 265.26 81.90 265.43 81.90 C268.72 81.90 269.37 82.55 269.37 85.62 L269.37 110.63 C269.37 113.76 268.72 114.35 265.43 114.35 C265.26 114.35 265.26 115.00 265.43 115.00 L272.34 114.89 C275.09 114.89 277.36 115.00 279.25 115.00 C279.47 115.00 279.47 114.35 279.25 114.35 C275.90 114.35 275.42 113.76 275.42 110.63 M303.94 108.14 C303.89 111.98 302.00 114.35 299.08 114.35 C298.87 114.35 298.87 115.00 299.08 115.00 C300.65 115.00 302.49 114.89 304.81 114.89 C306.86 114.89 308.48 115.00 310.05 115.00 C310.26 115.00 310.26 114.35 310.05 114.35 C307.08 114.35 305.40 111.98 305.46 108.14 L305.89 88.65 L319.55 114.62 C319.66 114.89 320.31 114.89 320.41 114.62 L331.54 88.54 L332.67 110.63 C332.89 113.76 332.19 114.35 328.84 114.35 C328.62 114.35 328.62 115.00 328.84 115.00 C330.73 115.00 333.00 114.89 335.70 114.89 L342.61 115.00 C342.77 115.00 342.77 114.35 342.61 114.35 C339.31 114.35 338.88 113.76 338.67 110.63 L337.37 86.11 C337.21 83.25 338.72 81.90 342.07 81.90 C342.28 81.90 342.28 81.25 342.07 81.25 C340.45 81.25 339.04 81.36 336.72 81.36 C335.64 81.36 334.89 81.25 334.18 81.25 C333.37 81.25 333.00 81.57 332.56 82.60 L322.30 106.14 L310.53 84.06 C309.29 81.79 309.02 81.25 308.05 81.25 C307.24 81.25 305.78 81.36 303.94 81.36 L299.46 81.25 C299.25 81.25 299.25 81.90 299.46 81.90 C301.46 81.90 302.97 83.09 304.38 85.73 L304.43 85.79 M362.12 115.00 L385.99 115.00 C386.63 115.00 386.80 114.78 386.80 114.19 C386.80 111.76 387.07 108.63 387.34 106.52 C387.34 106.36 386.74 106.20 386.69 106.41 C385.12 111.27 381.83 113.49 376.21 113.49 L374.43 113.49 C372.70 113.49 371.95 112.52 371.95 110.41 L371.95 98.21 L376.37 98.21 C380.69 98.21 382.96 100.04 382.96 102.96 C382.96 103.12 383.61 103.12 383.61 102.96 C383.61 100.91 383.45 99.29 383.45 97.45 L383.50 92.59 C383.50 92.37 382.91 92.37 382.91 92.59 C382.91 95.13 380.69 96.69 376.43 96.69 L371.95 96.69 L371.95 85.68 C371.95 83.73 372.92 82.82 375.08 82.82 L376.70 82.82 C381.18 82.82 383.83 84.76 385.01 88.97 C385.12 89.19 385.66 89.08 385.66 88.92 L385.55 81.74 C385.55 81.41 385.45 81.25 385.01 81.25 L362.12 81.25 C361.90 81.25 361.90 81.90 362.12 81.90 C365.41 81.90 365.95 82.55 365.95 85.62 L365.95 110.63 C365.95 113.76 365.41 114.35 362.12 114.35 C361.90 114.35 361.90 115.00 362.12 115.00" fill="url(#goldGrad)"/>
+    <text class="serif-tagline" x="60" y="152">
+      "The student operating system where the daily timetable orchestrates every academic action."
+    </text>
+  </g>
+
+  <!-- Cinema Scene Still: Gold Line Timetable + Gauges (60, 180 to 1140, 500) -->
+  <g transform="translate(60, 180)">
+    <!-- Still Container Frame -->
+    <rect width="1080" height="320" fill="#FFFFFF" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+
+    <!-- Still Frame Corner Accents -->
+    <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#9A722C" stroke-width="1.2"/>
+    <path d="M 1080 16 L 1080 0 L 1064 0" fill="none" stroke="#9A722C" stroke-width="1.2"/>
+    <path d="M 0 304 L 0 320 L 16 320" fill="none" stroke="#9A722C" stroke-width="1.2"/>
+    <path d="M 1080 304 L 1080 320 L 1064 320" fill="none" stroke="#9A722C" stroke-width="1.2"/>
+
+    <!-- Sub-heading inside Scene Still -->
+    <text class="sans-track" x="24" y="32" font-size="9" fill="#9A722C">SCENE STILL 01 &#8226; DAY CYCLE TIMELINE</text>
+    <text class="sans-track" x="1056" y="32" font-size="8.5" fill="#9C9485" text-anchor="end">45/10 POMODORO &#8226; CGPA FORECAST</text>
+
+    <!-- Timetable Section (Left: width 620) -->
+    <g transform="translate(24, 60)">
+      <line x1="0" y1="0" x2="600" y2="0" stroke="rgba(154, 114, 44, 0.18)" stroke-dasharray="3 3"/>
+      <line x1="0" y1="120" x2="600" y2="120" stroke="rgba(154, 114, 44, 0.18)" stroke-dasharray="3 3"/>
+
+      <!-- Slot 1: 09:00 MATH -->
+      <g transform="translate(0, 20)">
+        <rect width="110" height="70" fill="none" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+        <text class="sans-track" x="55" y="28" font-size="8.5" fill="#9C9485" text-anchor="middle">09:00</text>
+        <text class="sans-track" x="55" y="48" font-size="10" font-weight="600" fill="#686154" text-anchor="middle">MATH-201</text>
+      </g>
+
+      <!-- Slot 2: 10:30 CS-304 (ACTIVE) -->
+      <g transform="translate(130, 20)">
+        <rect class="active-slot" width="160" height="70" fill="none" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1.2"/>
+        <text class="sans-track" x="80" y="28" font-size="8.5" fill="#9C9485" text-anchor="middle">10:30 &#8226; LIVE</text>
+        <text class="sans-track" x="80" y="48" font-size="11" font-weight="600" fill="#9A722C" text-anchor="middle">CS-304 OS</text>
+        
+        <!-- Status indicator tag above -->
+        <g transform="translate(80, -10)">
+          <text class="sans-track tag-next" x="0" y="0" font-size="8" fill="#9C9485" text-anchor="middle">NEXT</text>
+          <text class="sans-track tag-now"  x="0" y="0" font-size="8.5" font-weight="600" fill="#BA8E3D" text-anchor="middle">&#9670; NOW &#9670;</text>
+          <text class="sans-track tag-done" x="0" y="0" font-size="8" fill="#686154" text-anchor="middle">&#10003; DONE</text>
+        </g>
+      </g>
+
+      <!-- Slot 3: 12:00 FREE -->
+      <g transform="translate(310, 20)">
+        <rect width="120" height="70" fill="none" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1" stroke-dasharray="2 2"/>
+        <text class="sans-track" x="60" y="28" font-size="8.5" fill="#9C9485" text-anchor="middle">12:00</text>
+        <text class="sans-track" x="60" y="48" font-size="9.5" fill="#9A722C" text-anchor="middle">FREE SLOT</text>
+      </g>
+
+      <!-- Slot 4: 13:30 AI LAB -->
+      <g transform="translate(450, 20)">
+        <rect width="140" height="70" fill="none" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+        <text class="sans-track" x="70" y="28" font-size="8.5" fill="#9C9485" text-anchor="middle">13:30</text>
+        <text class="sans-track" x="70" y="48" font-size="10" font-weight="600" fill="#686154" text-anchor="middle">AI LAB</text>
+      </g>
+
+      <!-- Sweeping Gold Hairline Scanner -->
+      <g class="scan-line" transform="translate(10, 10)">
+        <line x1="0" y1="0" x2="0" y2="90" stroke="#9A722C" stroke-width="1.5"/>
+        <circle cx="0" cy="0" r="2.5" fill="#BA8E3D"/>
+        <circle cx="0" cy="90" r="2.5" fill="#BA8E3D"/>
+      </g>
+    </g>
+
+    <!-- Still Timeline Lower Telemetry -->
+    <text class="sans-track" x="24" y="210" font-size="9" fill="#9C9485">FEATURE: REALTIME ATTENDANCE THRESHOLD (&gt;80% SAFE &#8226; &lt;75% CRITICAL) &#8226; REALTIME FRIEND MESH</text>
+
+    <!-- Right Side Gauges: Attendance Ring & Pomodoro Arc (x=720 to 1040) -->
+    <!-- Gauge 1: Attendance Ring -->
+    <g transform="translate(770, 140)">
+      <circle cx="0" cy="0" r="40" fill="none" stroke="rgba(154, 114, 44, 0.18)" stroke-width="3"/>
+      <circle class="ring-fill" cx="0" cy="0" r="40" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" transform="rotate(-90)"/>
+      <text class="sans-track" x="0" y="6" font-size="14" font-weight="600" fill="#9A722C" text-anchor="middle">86%</text>
+      <text class="sans-track" x="0" y="60" font-size="8.5" fill="#686154" text-anchor="middle">ATTENDANCE</text>
+      <text class="sans-track" x="0" y="74" font-size="7.5" fill="#9A722C" text-anchor="middle">SAFE TIER</text>
+    </g>
+
+    <!-- Divider between gauges -->
+    <line x1="880" y1="80" x2="880" y2="240" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1" stroke-dasharray="2 2"/>
+
+    <!-- Gauge 2: Pomodoro Arc -->
+    <g transform="translate(980, 140)">
+      <circle cx="0" cy="0" r="40" fill="none" stroke="rgba(154, 114, 44, 0.18)" stroke-width="3"/>
+      <circle class="arc-focus" cx="0" cy="0" r="40" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" transform="rotate(-90)"/>
+      <text class="sans-track" x="0" y="6" font-size="13" font-weight="600" fill="#141210" text-anchor="middle">45:00</text>
+      <text class="sans-track" x="0" y="60" font-size="8.5" fill="#686154" text-anchor="middle">POMODORO</text>
+      <text class="sans-track" x="0" y="74" font-size="7.5" fill="#9C9485" text-anchor="middle">45 / 10 / 20</text>
+    </g>
+  </g>
+
+  <!-- Cinema Credit Block (Bottom) -->
+  <g transform="translate(60, 545)">
+    <line x1="0" y1="0" x2="1080" y2="0" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+    
+    <g transform="translate(0, 30)">
+      <text class="sans-track" x="0" y="0" font-size="9" fill="#9C9485">EXECUTIVE PRODUCER</text>
+      <text class="sans-track" x="0" y="18" font-size="11" font-weight="600" fill="#141210">SATVIK</text>
+    </g>
+
+    <g transform="translate(240, 30)">
+      <text class="sans-track" x="0" y="0" font-size="9" fill="#9C9485">TECHNICAL ARCHITECTURE</text>
+      <text class="sans-track" x="0" y="18" font-size="11" font-weight="600" fill="#9A722C">NEXT.JS 14 &#8226; TYPESCRIPT &#8226; SUPABASE REALTIME &#8226; TAILWIND &#8226; REDIS</text>
+    </g>
+
+    <g transform="translate(900, 30)">
+      <text class="sans-track" x="180" y="0" font-size="9" fill="#9C9485" text-anchor="end">DISTRIBUTION</text>
+      <text class="sans-track" x="180" y="18" font-size="11" font-weight="600" fill="#141210" text-anchor="end">VERCEL PWA</text>
+    </g>
+
+    <!-- Bottom link hint -->
+    <text class="sans-track" x="540" y="80" font-size="9.5" fill="#9A722C" text-anchor="middle">
+      VIEW SOURCE &#8226; GITHUB.COM/SATVIK-4WEB/NEXTIME &#8226; LIVE DEMO IN RELEASE &#8599;
+    </text>
+  </g>
+</svg>

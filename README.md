@@ -1,173 +1,169 @@
 <div align="center">
+
+<!-- COLD OPEN HERO -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/cold-open-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/cold-open-light.svg">
+  <img alt="Title sequence: SATVIK, a film about building things" src="assets/cold-open-dark.svg" width="100%">
+</picture>
+
+<br><br>
+
+<!-- SYNOPSIS -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/synopsis-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/synopsis-light.svg">
+  <img alt="Synopsis: Computer engineering student at TIET and dev agency CTO building full-stack and AI systems" src="assets/synopsis-dark.svg" width="100%">
+</picture>
+
+<br><br>
+
+<a id="now-showing"></a>
+
+<!-- NOW SHOWING: POSTER 1 - NEXTIME -->
+<a href="https://nextime-omega.vercel.app/" target="_blank" rel="noopener noreferrer">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/boot-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/boot-light.svg">
-    <img alt="Terminal boot sequence: Satvik OS starting kernel and memory subsystems" src="assets/boot-dark.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)"  srcset="assets/posters/nextime-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/posters/nextime-light.svg">
+    <img alt="Now Showing feature poster for NexTime: student operating system with live timetable and attendance tracker" src="assets/posters/nextime-dark.svg" width="100%">
   </picture>
-</div>
+</a>
 
-<br>
+<br><br>
 
-<div align="center">
+<!-- NOW SHOWING: POSTER 2 - STUDENT MANAGEMENT SYSTEM -->
+<a href="https://github.com/Satvik-4web/laravelapp" target="_blank" rel="noopener noreferrer">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/desktop-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/desktop-light.svg">
-    <img alt="Satvik OS Desktop: about.sh floating window with student identity, agency CTO role, and AI engineering focus" src="assets/desktop-dark.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)"  srcset="assets/posters/student-management-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/posters/student-management-light.svg">
+    <img alt="Now Showing feature poster for Student Management System: 5-role Laravel Sanctum authentication architecture" src="assets/posters/student-management-dark.svg" width="100%">
   </picture>
-</div>
+</a>
 
-<br>
+<br><br>
 
-<div align="center">
-  <a href="#processes"><code>[ processes ]</code></a> &nbsp;&bull;&nbsp;
-  <a href="https://nextime-omega.vercel.app/"><code>[ live demo ]</code></a> &nbsp;&bull;&nbsp;
-  <a href="https://github.com/Satvik-4web?tab=repositories"><code>[ repositories ]</code></a> &nbsp;&bull;&nbsp;
-  <a href="#system-monitor"><code>[ system monitor ]</code></a>
-</div>
-
-<br>
-
-<h2 id="processes" align="center">Processes</h2>
-
-<!-- 1. NexTime -->
-<div align="center">
-  <a href="https://nextime-omega.vercel.app/">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/cards/nextime-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/cards/nextime-light.svg">
-      <img alt="Project Card: NexTime - Student OS with live timetable, attendance safety ring, and focus timer" src="assets/cards/nextime-dark.svg" width="100%">
-    </picture>
-  </a>
-</div>
-<p align="center">
-  <code><a href="https://github.com/Satvik-4web/Nextime">Satvik-4web/Nextime</a> &bull; <a href="https://nextime-omega.vercel.app/">Launch Web App ↗</a> &bull; Next.js 14, TypeScript, Supabase, Tailwind, Redis</code>
-</p>
-
-<br>
-
-<!-- 2. Student Management System -->
-<div align="center">
-  <a href="https://github.com/Satvik-4web/laravelapp">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/cards/student-management-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/cards/student-management-light.svg">
-      <img alt="Project Card: Student Management System - Laravel REST API with 5-tier Sanctum RBAC dispatcher" src="assets/cards/student-management-dark.svg" width="100%">
-    </picture>
-  </a>
-</div>
-<p align="center">
-  <code><a href="https://github.com/Satvik-4web/laravelapp">Satvik-4web/laravelapp</a> &bull; Laravel, PHP, Next.js, TypeScript, Sanctum, SQLite</code>
-</p>
-
-<br>
-
-<!-- 3. Waste Management System -->
-<div align="center">
-  <a href="https://github.com/Satvik-4web/dbms-project">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/cards/waste-management-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/cards/waste-management-light.svg">
-      <img alt="Project Card: Waste Management System - Oracle PL/SQL 3NF/BCNF relational engine with trigger constraint validation" src="assets/cards/waste-management-dark.svg" width="100%">
-    </picture>
-  </a>
-</div>
-<p align="center">
-  <code><a href="https://github.com/Satvik-4web/dbms-project">Satvik-4web/dbms-project</a> &bull; Oracle, PL/SQL, Node.js, Express, 3NF/BCNF, ACID</code>
-</p>
-
-<br>
-
-<!-- 4. CampusVerse -->
-<div align="center">
-  <a href="https://github.com/Satvik-4web/campus-verse">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/cards/campusverse-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/cards/campusverse-light.svg">
-      <img alt="Project Card: CampusVerse - Spatial AR/VR interactive kiosk and student platform funded by TIET ELC" src="assets/cards/campusverse-dark.svg" width="100%">
-    </picture>
-  </a>
-</div>
-<p align="center">
-  <code><a href="https://github.com/Satvik-4web/campus-verse">Satvik-4web/campus-verse</a> &bull; JavaScript, WebAR/VR, 3D Kiosk, TIET ELC Funded</code>
-</p>
-
-<br>
-
-<!-- 5. Banknote Authentication -->
-<div align="center">
-  <a href="https://github.com/Satvik-4web/banknote-authentication-machine-learning">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/cards/banknote-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/cards/banknote-light.svg">
-      <img alt="Project Card: Banknote Authentication - Machine learning model comparison with 2D feature scatter and boundary refinement" src="assets/cards/banknote-dark.svg" width="100%">
-    </picture>
-  </a>
-</div>
-<p align="center">
-  <code><a href="https://github.com/Satvik-4web/banknote-authentication-machine-learning">Satvik-4web/banknote-authentication-machine-learning</a> &bull; Python, scikit-learn, Pandas, NumPy</code>
-</p>
-
-<br>
-
-<!-- Dock: Runtime Tech Stack -->
-<div align="center">
+<!-- NOW SHOWING: POSTER 3 - WASTE MANAGEMENT SYSTEM -->
+<a href="https://github.com/Satvik-4web/dbms-project" target="_blank" rel="noopener noreferrer">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/dock-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/dock-light.svg">
-    <img alt="Satvik OS Runtime Dock: Python, TypeScript, C++, React, Next.js, Node.js, Laravel, PostgreSQL, Redis, Git" src="assets/dock-dark.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)"  srcset="assets/posters/waste-management-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/posters/waste-management-light.svg">
+    <img alt="Now Showing feature poster for Waste Management System: Oracle PL/SQL normalized relational model and ACID transactions" src="assets/posters/waste-management-dark.svg" width="100%">
   </picture>
-</div>
+</a>
 
-<br>
+<br><br>
 
-<!-- System Monitor Panel -->
-<div align="center" id="system-monitor">
+<!-- NOW SHOWING: POSTER 4 - CAMPUSVERSE -->
+<a href="https://github.com/Satvik-4web/campus-verse" target="_blank" rel="noopener noreferrer">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/monitor-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/monitor-light.svg">
-    <img alt="Satvik OS Telemetry Monitor: Public repositories, 30-day commits, latest pushed repo, and language byte distribution" src="assets/monitor-dark.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)"  srcset="assets/posters/campusverse-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/posters/campusverse-light.svg">
+    <img alt="Now Showing feature poster for CampusVerse: AR/VR digital kiosk and student platform funded by TIET ELC" src="assets/posters/campusverse-dark.svg" width="100%">
   </picture>
-</div>
+</a>
 
-<br>
+<br><br>
 
-<!-- Terminal Shutdown Footer -->
-<div align="center">
+<!-- NOW SHOWING: POSTER 5 - BANKNOTE AUTHENTICATION -->
+<a href="https://github.com/Satvik-4web/banknote-authentication-machine-learning" target="_blank" rel="noopener noreferrer">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/shutdown-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/shutdown-light.svg">
-    <img alt="Terminal session footer: BUILD -> BREAK -> LEARN -> REBUILD" src="assets/shutdown-dark.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)"  srcset="assets/posters/banknote-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/posters/banknote-light.svg">
+    <img alt="Now Showing feature poster for Banknote Authentication: comparative evaluation of machine learning classification models" src="assets/posters/banknote-dark.svg" width="100%">
   </picture>
+</a>
+
+<br><br>
+
+<!-- END CREDITS: TECHNICAL CAST -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/credits-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/credits-light.svg">
+  <img alt="End Credits: technical cast of languages, frameworks, data platforms, and machine learning tools" src="assets/credits-dark.svg" width="100%">
+</picture>
+
+<br><br>
+
+<!-- BEHIND THE SCENES: PRODUCTION STATS SLATE -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/production-stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/production-stats-light.svg">
+  <img alt="Behind the Scenes: production telemetry slate detailing repositories, commits, and language footprint" src="assets/production-stats-dark.svg" width="100%">
+</picture>
+
+<br><br>
+
+<!-- END CARD -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/end-card-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/end-card-light.svg">
+  <img alt="End card: TO BE CONTINUED." src="assets/end-card-dark.svg" width="100%">
+</picture>
+
+<br><br>
+
+<sub>
+  <a href="#now-showing">PROJECTS</a> &nbsp;&bull;&nbsp; 
+  <a href="https://nextime-omega.vercel.app/" target="_blank" rel="noopener noreferrer">LIVE DEMO</a> &nbsp;&bull;&nbsp; 
+  <a href="https://github.com/Satvik-4web?tab=repositories" target="_blank" rel="noopener noreferrer">REPOSITORIES</a>
+</sub>
+
+<br><br>
+
 </div>
 
-<br>
+---
 
-<!-- Accessibility & SEO Fallback -->
 <details>
-  <summary><strong>Plain Text Terminal Readout (Accessibility &amp; Screen Reader Fallback)</strong></summary>
+  <summary><b>Plain Text Synopsis &amp; Production Catalogue (Accessibility &amp; Fallback)</b></summary>
   <br>
 
-### Identity
-- **Name:** Satvik (GitHub: Satvik-4web)
-- **Role:** Computer Engineering Student &amp; Dev Agency Co-founder / CTO
-- **Institution:** Thapar Institute of Engineering &amp; Technology (TIET), Patiala (Class of 2028)
-- **Focus:** Full-stack systems architecture transitioning into AI engineering (LLM APIs, RAG pipelines, Vector Search)
-- **Philosophy:** `BUILD → BREAK → LEARN → REBUILD`
+  ### Identity &amp; Synopsis
+  - **Name:** Satvik (GitHub: [`Satvik-4web`](https://github.com/Satvik-4web))
+  - **Education:** Computer Engineering student at Thapar Institute of Engineering &amp; Technology (TIET), Patiala &bull; Graduating 2028.
+  - **Role:** Co-founder &amp; CTO of a dev agency.
+  - **Engineering Focus:** Building resilient full-stack architectures and advancing into AI engineering (LLM APIs, retrieval-augmented generation pipelines, vector search).
+  - **Motto:** `BUILD → BREAK → LEARN → REBUILD`
 
-### Featured Projects
-1. **NexTime** ([Repository](https://github.com/Satvik-4web/Nextime) | [Live Demo](https://nextime-omega.vercel.app/))
-   - "Student OS": timetable-first platform with live class &amp; free-slot detection, attendance tracking threshold (&gt;80% safe, &lt;75% critical), Pomodoro focus timer (45/10/20), CGPA forecasting, and realtime community.
-   - Stack: Next.js 14, React, TypeScript, Tailwind, Framer Motion, Zustand, Supabase (Postgres + Realtime), Upstash Redis, Vercel.
-2. **Student Management System** ([Repository](https://github.com/Satvik-4web/laravelapp))
-   - Laravel REST API with Sanctum bearer-token authentication, 5-tier role-based access control (Admin, Principal, HOD, Faculty, Student) enforced by backend route middleware, token revocation, student CRUD API, and Postman collection.
-   - Stack: Laravel, PHP, SQLite, Next.js, React, TypeScript, Tailwind.
-3. **Waste Management System** ([Repository](https://github.com/Satvik-4web/dbms-project))
-   - Normalized relational schema (3NF/BCNF) in Oracle PL/SQL with automated capacity and quantity validation triggers, ACID transaction guarantees, and Node.js Express API.
-   - Stack: Oracle, PL/SQL, Node.js, Express, JavaScript.
-4. **CampusVerse** ([Repository](https://github.com/Satvik-4web/campus-verse))
-   - Interactive AR/VR digital kiosk and student platform funded through TIET's Experiential Learning Centre (ELC).
-   - Stack: JavaScript, WebAR/VR, 3D Kiosk, Interactive Web.
-5. **Banknote Authentication** ([Repository](https://github.com/Satvik-4web/banknote-authentication-machine-learning))
-   - Comparative machine learning evaluation analyzing multiple classification algorithms on banknote statistical wavelet features.
-   - Stack: Python, scikit-learn, NumPy, Pandas.
+  ---
+
+  ### Feature Catalogue (Now Showing)
+  1. **[NexTime](https://github.com/Satvik-4web/Nextime)** &bull; [Live Application](https://nextime-omega.vercel.app/)
+     - *Overview:* Student Operating System built around dynamic timetable scheduling. Features live current/next class detection, free-slot intelligence, multi-tier attendance monitoring (critical &lt;75%, warning 75&ndash;80%, safe &gt;80%), assignment tracker, 45/10/20 Pomodoro focus mode, CGPA forecaster, friend schedule viewer, realtime community hub, and installable PWA.
+     - *Stack:* Next.js 14, React, TypeScript, Tailwind CSS, Framer Motion, Zustand, Supabase (PostgreSQL + Realtime), Upstash Redis, Vercel.
+
+  2. **[Student Management System](https://github.com/Satvik-4web/laravelapp)**
+     - *Overview:* Decoupled role-based educational administration platform. Enforces strict backend authorization across 5 roles (Admin, Principal, HOD, Faculty, Student) via Laravel Sanctum bearer tokens, token revocation on credential changes, full student CRUD operations, and verified Postman test collection.
+     - *Stack:* Laravel, PHP, SQLite, Next.js, React, TypeScript, Tailwind CSS.
+
+  3. **[Waste Management System](https://github.com/Satvik-4web/dbms-project)**
+     - *Overview:* Relational database management architecture for municipal waste logistics. Implements normalized schemas (3NF/BCNF), Oracle PL/SQL stored procedures, functions, cursors, automated validation triggers (capacity check &amp; quota limits), and ACID transaction rollbacks.
+     - *Stack:* Oracle Database, PL/SQL, Node.js, Express, JavaScript.
+
+  4. **[CampusVerse](https://github.com/Satvik-4web/campus-verse)**
+     - *Overview:* Interactive digital kiosk and augmented reality campus navigation platform funded through TIET's Experiential Learning Centre (ELC).
+     - *Stack:* WebXR / AR, Three.js / WebGL, TypeScript.
+
+  5. **[Banknote Authentication](https://github.com/Satvik-4web/banknote-authentication-machine-learning)**
+     - *Overview:* Machine learning pipeline benchmarking multiple classification algorithms on statistical image wavelet features (variance, skewness, curtosis, entropy) to classify genuine and counterfeit banknotes.
+     - *Stack:* Python, scikit-learn, NumPy, Pandas.
+
+  ---
+
+  ### Also in the Catalogue (Other Public Repositories)
+  - **[`SceneNav-AI`](https://github.com/Satvik-4web/SceneNav-AI):** Autonomous navigation and spatial scene comprehension.
+  - **[`samsung-prism-streaming-rag`](https://github.com/Satvik-4web/samsung-prism-streaming-rag):** Real-time streaming retrieval-augmented generation pipeline.
+  - **[`smart-library-seat-management`](https://github.com/Satvik-4web/smart-library-seat-management):** Automated library seating allocation system.
+  - **[`sovaraAI`](https://github.com/Satvik-4web/sovaraAI) &amp; [`sovara-ai-workbench`](https://github.com/Satvik-4web/sovara-ai-workbench):** AI experimentation workbench and model exploration.
+  - **[`5G-Lab-Room`](https://github.com/Satvik-4web/5G-Lab-Room):** Telecommunications laboratory management and resource tracking.
+  - **[`DSA-Codes`](https://github.com/Satvik-4web/DSA-Codes) &amp; [`leetcode-codes`](https://github.com/Satvik-4web/leetcode-codes):** Algorithmic implementations and data structure solutions.
+
+  ---
+
+  ### Technical Cast (Stack &amp; Tools)
+  - **Languages:** Python, TypeScript, JavaScript, C++, PHP, C#
+  - **Frameworks &amp; Platforms:** Next.js 14, React, Node.js, Express, Laravel, Tailwind CSS
+  - **Data &amp; Storage:** PostgreSQL, Supabase Realtime, Upstash Redis, Oracle Database, SQLite
+  - **Machine Learning &amp; AI:** scikit-learn, NumPy, Pandas, LLM APIs, RAG Pipelines, Vector Search
+  - **Tools:** Git, GitHub Actions, Docker, Postman, VS Code, Linux / Bash
 </details>

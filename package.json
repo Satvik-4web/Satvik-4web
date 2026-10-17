@@ -1,0 +1,18 @@
+{
+  "name": "satvik-4web",
+  "version": "1.0.0",
+  "description": "Prestige film title sequence GitHub profile for Satvik-4web",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-assets.mjs",
+    "stats": "node scripts/generate-stats.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Satvik-4web/Satvik-4web.git"
+  },
+  "license": "OFL-1.1",
+  "dependencies": {
+    "opentype.js": "^2.0.0"
+  }
+}

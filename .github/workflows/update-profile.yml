@@ -1,4 +1,4 @@
-name: Update Profile System Monitor
+name: Update Production Stats
 
 on:
   schedule:
@@ -10,12 +10,13 @@ on:
     paths:
       - 'scripts/**'
       - 'templates/**'
+      - 'theme.config.json'
 
 permissions:
   contents: write
 
 jobs:
-  refresh-monitor:
+  refresh-stats:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -26,19 +27,27 @@ jobs:
         with:
           node-version: 20
 
-      - name: Generate System Monitor SVGs
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+      - name: Generate Production Stats SVGs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          node scripts/generate-monitor.mjs
+          node scripts/generate-stats.mjs
 
-      - name: Commit changes if telemetry changed
+      - name: Commit changes if production stats changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/monitor*.svg
+          git add assets/production-stats*.svg
           if ! git diff --staged --quiet; then
-            git commit -m "chore: refresh system monitor"
+            git commit -m "chore: refresh production stats"
             git push origin master
           else
             echo "No telemetry changes detected. Skipping commit."

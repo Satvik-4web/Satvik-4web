@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="700" role="img" aria-label="Poster and scene illustration for CampusVerse: AR/VR digital kiosk funded by TIET ELC">
+  <title>CampusVerse — Feature Poster</title>
+  <defs>
+    
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9A722C"/>
+      <stop offset="50%" stop-color="#BA8E3D"/>
+      <stop offset="100%" stop-color="#9A722C"/>
+    </linearGradient>
+
+    <linearGradient id="flareGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0"/>
+      <stop offset="30%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="fadeMaskGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Subtle filmic grain -->
+    <filter id="filmGrain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="2" result="noise"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.025 0"/>
+    </filter>
+  
+  </defs>
+
+  <style>
+    .sans-track {
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+    .serif-tagline {
+      font-family: ui-serif, "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      font-style: italic;
+      fill: #686154;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .ar-frame {
+        transform-origin: 540px 160px;
+        animation: frameRotate 10s ease-in-out infinite;
+      }
+      .laser-sweep {
+        animation: laserMotion 5s ease-in-out infinite;
+      }
+    }
+    @keyframes frameRotate {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50%      { transform: translateY(-6px) rotate(2deg); }
+    }
+    @keyframes laserMotion {
+      0%   { transform: translateY(0px); opacity: 0; }
+      15%  { opacity: 0.9; }
+      85%  { opacity: 0.9; }
+      100% { transform: translateY(180px); opacity: 0; }
+    }
+  </style>
+
+  
+    <!-- Letterbox Base Surface -->
+    <rect width="1200" height="700" fill="#F6F1E9"/>
+
+    <!-- Top & Bottom Cinematic Letterbox Bars -->
+    <rect x="0" y="0" width="1200" height="49" fill="#EAE3D6"/>
+    <rect x="0" y="651" width="1200" height="49" fill="#EAE3D6"/>
+    <line x1="0" y1="49" x2="1200" y2="49" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+    <line x1="0" y1="651" x2="1200" y2="651" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+
+    <!-- Inset Hairline Frame -->
+    <rect x="24" y="24" width="1152" height="652" fill="none" stroke="rgba(154, 114, 44, 0.45)" stroke-width="1"/>
+
+    <!-- Corner Registration Marks -->
+    <!-- Top-Left -->
+    <path d="M 16 24 L 32 24 M 24 16 L 24 32" stroke="#9A722C" stroke-width="1"/>
+    <!-- Top-Right -->
+    <path d="M 1168 24 L 1184 24 M 1176 16 L 1176 32" stroke="#9A722C" stroke-width="1"/>
+    <!-- Bottom-Left -->
+    <path d="M 16 676 L 32 676 M 24 668 L 24 684" stroke="#9A722C" stroke-width="1"/>
+    <!-- Bottom-Right -->
+    <path d="M 1168 676 L 1184 676 M 1176 668 L 1176 684" stroke="#9A722C" stroke-width="1"/>
+
+    <!-- Subtle Film Grain Overlay -->
+    <rect width="1200" height="700" filter="url(#filmGrain)" pointer-events="none"/>
+  
+
+  <!-- Poster Header -->
+  <g transform="translate(60, 68)">
+    <text class="sans-track" x="0" y="0" font-size="10" fill="#9C9485">PRODUCTION 04 &#8226; SPATIAL AR WEB ARCHITECTURE</text>
+    <rect x="940" y="-12" width="140" height="20" fill="none" stroke="rgba(154, 114, 44, 0.45)" stroke-width="1"/>
+    <text class="sans-track" x="1010" y="2" font-size="9" font-weight="600" fill="#9A722C" text-anchor="middle">&#9670; FEATURED SYSTEM</text>
+  </g>
+
+  <!-- Title & Tagline -->
+  <g transform="translate(0, 0)">
+    <path d="M83.06 80.66 C71.50 80.66 62.65 87.95 62.65 98.37 C62.65 108.57 71.07 115.65 82.73 115.65 C85.81 115.65 89.32 115.11 92.78 113.87 C93.43 113.60 93.48 113.49 93.59 112.62 L94.40 105.93 C94.40 105.71 93.91 105.60 93.80 105.82 C90.83 111.87 87.81 114.51 82.73 114.51 C74.96 114.51 69.45 108.14 69.45 97.99 C69.45 87.95 74.85 81.79 82.19 81.79 C87.49 81.79 91.27 85.08 93.26 90.92 C93.43 91.19 93.91 91.08 93.91 90.86 L93.21 83.36 C93.16 82.60 93.05 82.33 92.40 82.11 C90.24 81.20 86.30 80.66 83.06 80.66 M151.49 114.35 C149.71 114.35 148.31 112.73 145.77 107.60 L132.27 81.03 C132.16 80.76 131.35 80.82 131.30 81.03 L119.58 106.79 C116.82 112.89 115.47 114.35 112.56 114.35 C112.29 114.35 112.29 115.00 112.56 115.00 C114.99 115.00 116.23 114.78 119.04 114.78 C121.79 114.78 123.25 115.00 125.41 115.00 C125.73 115.00 125.73 114.35 125.41 114.35 C121.36 114.35 119.09 111.65 121.04 107.33 L123.14 102.63 L136.43 102.63 L140.10 109.92 C141.88 113.43 141.50 114.35 138.53 114.35 C138.21 114.35 138.21 115.00 138.53 115.00 C140.75 115.00 142.26 114.78 144.74 114.78 C146.90 114.78 149.33 115.00 151.49 115.00 C151.82 115.00 151.82 114.35 151.49 114.35 M123.84 101.12 L129.41 88.81 L135.62 101.12 M173.76 108.14 C173.70 111.98 171.81 114.35 168.90 114.35 C168.68 114.35 168.68 115.00 168.90 115.00 C170.46 115.00 172.30 114.89 174.62 114.89 C176.67 114.89 178.29 115.00 179.86 115.00 C180.07 115.00 180.07 114.35 179.86 114.35 C176.89 114.35 175.21 111.98 175.27 108.14 L175.70 88.65 L189.36 114.62 C189.47 114.89 190.12 114.89 190.23 114.62 L201.35 88.54 L202.48 110.63 C202.70 113.76 202.00 114.35 198.65 114.35 C198.43 114.35 198.43 115.00 198.65 115.00 C200.54 115.00 202.81 114.89 205.51 114.89 L212.42 115.00 C212.58 115.00 212.58 114.35 212.42 114.35 C209.13 114.35 208.69 113.76 208.48 110.63 L207.18 86.11 C207.02 83.25 208.53 81.90 211.88 81.90 C212.10 81.90 212.10 81.25 211.88 81.25 C210.26 81.25 208.86 81.36 206.53 81.36 C205.45 81.36 204.70 81.25 204.00 81.25 C203.19 81.25 202.81 81.57 202.38 82.60 L192.12 106.14 L180.34 84.06 C179.10 81.79 178.83 81.25 177.86 81.25 C177.05 81.25 175.59 81.36 173.76 81.36 L169.27 81.25 C169.06 81.25 169.06 81.90 169.27 81.90 C171.27 81.90 172.78 83.09 174.19 85.73 L174.24 85.79 M241.38 110.41 L241.38 85.73 C241.38 82.92 241.97 82.28 243.97 82.28 C248.62 82.28 251.05 85.52 251.05 91.19 C251.05 97.18 248.35 100.10 245.27 100.10 C244.84 100.10 244.03 100.04 243.43 99.88 C243.16 99.83 243.05 100.53 243.27 100.58 C244.13 100.80 245.05 100.85 245.81 100.85 C251.42 100.85 257.90 97.34 257.58 89.94 C257.31 83.63 252.50 81.09 245.70 81.09 C243.27 81.09 240.08 81.41 238.36 81.41 C235.76 81.41 233.44 81.25 231.55 81.25 C231.34 81.25 231.34 81.90 231.55 81.90 C234.85 81.90 235.39 82.55 235.39 85.62 L235.39 110.63 C235.39 113.76 234.85 114.35 231.55 114.35 C231.34 114.35 231.34 115.00 231.55 115.00 C233.44 115.00 235.82 114.89 238.41 114.89 C241.60 114.89 244.24 115.00 246.56 115.00 C246.78 115.00 246.78 114.35 246.56 114.35 C242.08 114.35 241.38 113.65 241.38 110.41 M306.41 88.16 L306.41 103.23 C306.41 110.03 302.79 113.76 296.85 113.76 C290.91 113.76 287.13 110.03 287.13 101.18 L287.13 85.73 C287.13 82.65 287.73 81.90 290.97 81.90 C291.18 81.90 291.18 81.25 290.97 81.25 C289.13 81.25 286.81 81.41 284.11 81.41 C281.52 81.41 279.20 81.25 277.31 81.25 C277.09 81.25 277.09 81.90 277.31 81.90 C280.55 81.90 281.14 82.55 281.14 85.62 L281.14 103.07 C281.14 111.06 286.86 115.76 294.80 115.76 C302.85 115.76 308.25 110.84 308.25 103.17 L308.25 88.16 C308.25 84.33 309.87 81.90 312.73 81.90 C312.89 81.90 312.89 81.25 312.73 81.25 C311.11 81.25 309.22 81.41 307.28 81.41 C305.01 81.41 303.17 81.25 301.39 81.25 C301.23 81.25 301.23 81.90 301.39 81.90 C304.58 81.90 306.41 84.33 306.41 88.16 M338.94 86.70 C338.94 83.41 341.15 81.84 343.85 81.84 C349.63 81.84 351.63 89.24 352.49 91.02 C352.60 91.24 353.08 91.08 353.08 90.86 L353.08 82.92 C353.08 82.49 352.98 82.17 352.27 81.84 C350.76 81.20 347.90 80.66 345.31 80.66 C339.91 80.66 333.97 83.30 333.97 89.35 C333.97 94.16 337.69 96.53 341.47 99.02 C345.31 101.55 349.25 104.09 349.25 109.17 C349.25 113.22 346.77 114.30 344.28 114.30 C339.15 114.30 336.34 108.30 334.13 103.77 C334.02 103.50 333.48 103.55 333.54 103.88 L333.70 112.46 C333.70 113.11 333.91 113.27 334.24 113.49 C335.48 114.57 339.64 115.65 342.88 115.65 C349.52 115.65 354.54 111.76 354.54 106.04 C354.54 100.85 350.38 98.15 346.33 95.56 C342.55 93.13 338.94 90.81 338.94 86.70 M409.26 81.25 C407.48 81.25 406.51 81.41 404.51 81.41 C401.43 81.41 399.86 81.25 397.81 81.25 C397.60 81.25 397.60 81.90 397.81 81.90 C401.32 81.90 402.46 84.60 401.16 88.11 L394.14 106.63 L384.80 86.70 C383.39 83.79 384.53 81.90 387.61 81.90 C387.82 81.90 387.82 81.25 387.61 81.25 C385.88 81.25 383.56 81.41 377.56 81.41 C374.86 81.41 374.86 81.25 373.62 81.25 C373.40 81.25 373.40 81.90 373.62 81.90 C375.29 81.90 376.48 83.25 377.72 85.73 L391.49 114.95 C391.60 115.22 392.57 115.22 392.68 114.95 L402.67 88.27 C404.13 84.38 406.61 81.90 409.26 81.90 C409.48 81.90 409.48 81.25 409.26 81.25 M427.20 115.00 L451.07 115.00 C451.72 115.00 451.88 114.78 451.88 114.19 C451.88 111.76 452.15 108.63 452.42 106.52 C452.42 106.36 451.83 106.20 451.77 106.41 C450.21 111.27 446.91 113.49 441.30 113.49 L439.52 113.49 C437.79 113.49 437.03 112.52 437.03 110.41 L437.03 98.21 L441.46 98.21 C445.78 98.21 448.05 100.04 448.05 102.96 C448.05 103.12 448.70 103.12 448.70 102.96 C448.70 100.91 448.53 99.29 448.53 97.45 L448.59 92.59 C448.59 92.37 447.99 92.37 447.99 92.59 C447.99 95.13 445.78 96.69 441.51 96.69 L437.03 96.69 L437.03 85.68 C437.03 83.73 438.00 82.82 440.16 82.82 L441.78 82.82 C446.27 82.82 448.91 84.76 450.10 88.97 C450.21 89.19 450.75 89.08 450.75 88.92 L450.64 81.74 C450.64 81.41 450.53 81.25 450.10 81.25 L427.20 81.25 C426.99 81.25 426.99 81.90 427.20 81.90 C430.50 81.90 431.04 82.55 431.04 85.62 L431.04 110.63 C431.04 113.76 430.50 114.35 427.20 114.35 C426.99 114.35 426.99 115.00 427.20 115.00 M499.42 115.00 L509.03 115.00 C509.19 115.00 509.19 114.35 509.03 114.35 C504.76 114.35 500.50 109.71 492.18 97.18 C495.64 95.34 498.12 92.05 498.12 87.95 C498.12 83.63 494.40 81.09 487.81 81.09 C485.27 81.09 482.25 81.41 479.87 81.41 C477.28 81.41 474.96 81.25 473.07 81.25 C472.90 81.25 472.90 81.90 473.07 81.90 C476.36 81.90 476.90 82.55 476.90 85.62 L476.90 110.63 C476.90 113.76 476.31 114.35 473.01 114.35 C472.80 114.35 472.80 115.00 473.01 115.00 C474.90 115.00 477.28 114.89 479.87 114.89 C482.62 114.89 484.89 115.00 486.78 115.00 C486.94 115.00 486.94 114.35 486.78 114.35 C483.43 114.35 482.95 113.76 482.95 110.63 L482.95 98.69 L485.92 98.75 C486.35 98.75 486.73 98.75 487.16 98.69 C493.26 109.01 497.80 115.00 499.42 115.00 M491.97 90.00 C491.97 95.18 490.29 97.40 486.08 97.40 C485.22 97.40 483.92 97.34 482.95 97.18 L482.95 85.73 C482.95 83.25 484.08 82.22 486.94 82.22 C489.86 82.22 491.97 83.63 491.97 90.00 M533.89 86.70 C533.89 83.41 536.10 81.84 538.80 81.84 C544.58 81.84 546.58 89.24 547.44 91.02 C547.55 91.24 548.03 91.08 548.03 90.86 L548.03 82.92 C548.03 82.49 547.93 82.17 547.22 81.84 C545.71 81.20 542.85 80.66 540.26 80.66 C534.86 80.66 528.92 83.30 528.92 89.35 C528.92 94.16 532.64 96.53 536.42 99.02 C540.26 101.55 544.20 104.09 544.20 109.17 C544.20 113.22 541.72 114.30 539.23 114.30 C534.10 114.30 531.29 108.30 529.08 103.77 C528.97 103.50 528.43 103.55 528.49 103.88 L528.65 112.46 C528.65 113.11 528.86 113.27 529.19 113.49 C530.43 114.57 534.59 115.65 537.83 115.65 C544.47 115.65 549.49 111.76 549.49 106.04 C549.49 100.85 545.33 98.15 541.28 95.56 C537.50 93.13 533.89 90.81 533.89 86.70 M570.51 115.00 L594.38 115.00 C595.03 115.00 595.19 114.78 595.19 114.19 C595.19 111.76 595.46 108.63 595.73 106.52 C595.73 106.36 595.14 106.20 595.08 106.41 C593.52 111.27 590.22 113.49 584.61 113.49 L582.83 113.49 C581.10 113.49 580.34 112.52 580.34 110.41 L580.34 98.21 L584.77 98.21 C589.09 98.21 591.36 100.04 591.36 102.96 C591.36 103.12 592.01 103.12 592.01 102.96 C592.01 100.91 591.84 99.29 591.84 97.45 L591.90 92.59 C591.90 92.37 591.30 92.37 591.30 92.59 C591.30 95.13 589.09 96.69 584.82 96.69 L580.34 96.69 L580.34 85.68 C580.34 83.73 581.31 82.82 583.47 82.82 L585.09 82.82 C589.58 82.82 592.22 84.76 593.41 88.97 C593.52 89.19 594.06 89.08 594.06 88.92 L593.95 81.74 C593.95 81.41 593.84 81.25 593.41 81.25 L570.51 81.25 C570.30 81.25 570.30 81.90 570.51 81.90 C573.81 81.90 574.35 82.55 574.35 85.62 L574.35 110.63 C574.35 113.76 573.81 114.35 570.51 114.35 C570.30 114.35 570.30 115.00 570.51 115.00" fill="url(#goldGrad)"/>
+    <text class="serif-tagline" x="60" y="152">
+      "Interactive digital kiosk and spatial student web platform funded through TIET's Experiential Learning Centre."
+    </text>
+  </g>
+
+  <!-- Cinema Scene Still: Wireframe Kiosk + AR Reticle + Scan Line (60, 180 to 1140, 500) -->
+  <g transform="translate(60, 180)">
+    <rect width="1080" height="320" fill="#FFFFFF" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+
+    <!-- Still Frame Corner Accents -->
+    <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#9A722C" stroke-width="1.2"/>
+    <path d="M 1080 16 L 1080 0 L 1064 0" fill="none" stroke="#9A722C" stroke-width="1.2"/>
+    <path d="M 0 304 L 0 320 L 16 320" fill="none" stroke="#9A722C" stroke-width="1.2"/>
+    <path d="M 1080 304 L 1080 320 L 1064 320" fill="none" stroke="#9A722C" stroke-width="1.2"/>
+
+    <text class="sans-track" x="24" y="32" font-size="9" fill="#9A722C">SCENE STILL 04 &#8226; SPATIAL KIOSK MESH</text>
+    <text class="sans-track" x="1056" y="32" font-size="8.5" fill="#9C9485" text-anchor="end">TIET ELC GRANT &#8226; 6-DOF ANCHOR</text>
+
+    <!-- Isometric Wireframe Kiosk (Centered at x=540, y=160) -->
+    <g transform="translate(300, 30)">
+      <!-- Isometric Ground Grid -->
+      <path d="M 80 200 L 240 140 L 400 200 L 240 260 Z" fill="none" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+      <path d="M 160 170 L 320 230 M 320 170 L 160 230" stroke="rgba(154, 114, 44, 0.18)" stroke-width="0.8" stroke-dasharray="2 2"/>
+
+      <!-- Kiosk Core Prism -->
+      <!-- Vertical lines -->
+      <line x1="200" y1="190" x2="200" y2="90" stroke="#9A722C" stroke-width="1.4"/>
+      <line x1="240" y1="205" x2="240" y2="105" stroke="#9A722C" stroke-width="1.4"/>
+      <line x1="280" y1="190" x2="280" y2="90" stroke="#9A722C" stroke-width="1.4"/>
+      <line x1="240" y1="175" x2="240" y2="75" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1" stroke-dasharray="2 2"/>
+
+      <!-- Front screen face -->
+      <polygon points="200,90 240,105 240,65 200,50" fill="rgba(154, 114, 44, 0.18)" stroke="#9A722C" stroke-width="1.2"/>
+      <!-- Right face -->
+      <polygon points="240,105 280,90 280,50 240,65" fill="none" stroke="#9A722C" stroke-width="1.2"/>
+      <!-- Top face -->
+      <polygon points="200,50 240,35 280,50 240,65" fill="#F0EAE0" stroke="#9A722C" stroke-width="1.2"/>
+
+      <!-- Ambient Architectural Pavilion Framework -->
+      <line x1="140" y1="160" x2="140" y2="70" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+      <line x1="340" y1="160" x2="340" y2="70" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+      <line x1="140" y1="70" x2="240" y2="20" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1" stroke-dasharray="3 3"/>
+      <line x1="340" y1="70" x2="240" y2="20" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1" stroke-dasharray="3 3"/>
+
+      <!-- Rotating AR Reticle Corners (Targeting Kiosk) -->
+      <g class="ar-frame">
+        <path d="M 160 50 L 160 30 L 180 30" fill="none" stroke="#9A722C" stroke-width="2"/>
+        <path d="M 300 30 L 320 30 L 320 50" fill="none" stroke="#9A722C" stroke-width="2"/>
+        <path d="M 160 170 L 160 190 L 180 190" fill="none" stroke="#9A722C" stroke-width="2"/>
+        <path d="M 300 190 L 320 190 L 320 170" fill="none" stroke="#9A722C" stroke-width="2"/>
+        <!-- Central crosshairs -->
+        <circle cx="240" cy="110" r="3" fill="#9A722C"/>
+        <line x1="230" y1="110" x2="250" y2="110" stroke="#9A722C" stroke-width="1"/>
+        <line x1="240" y1="100" x2="240" y2="120" stroke="#9A722C" stroke-width="1"/>
+      </g>
+
+      <!-- Laser Scan Sweep -->
+      <g class="laser-sweep" transform="translate(140, 30)">
+        <line x1="0" y1="0" x2="200" y2="0" stroke="#BA8E3D" stroke-width="1.8"/>
+      </g>
+    </g>
+
+    <!-- Telemetry Readout Details (Bottom Left & Right inside still) -->
+    <g transform="translate(24, 255)">
+      <text class="sans-track" x="0" y="0" font-size="9" fill="#9C9485">HARDWARE &#8226; DIGITAL KIOSK TERMINAL</text>
+      <text class="sans-track" x="0" y="16" font-size="9.5" font-weight="600" fill="#141210">PATIALA CAMPUS COORDINATES: 30.3564&#176; N, 76.3647&#176; E</text>
+    </g>
+
+    <g transform="translate(1056, 255)">
+      <text class="sans-track" x="0" y="0" font-size="9" fill="#9C9485" text-anchor="end">EXPERIENTIAL LEARNING CENTRE</text>
+      <text class="sans-track" x="0" y="16" font-size="9.5" font-weight="600" fill="#9A722C" text-anchor="end">GRANT FUNDED &#8226; TIET ELC</text>
+    </g>
+  </g>
+
+  <!-- Cinema Credit Block (Bottom) -->
+  <g transform="translate(60, 545)">
+    <line x1="0" y1="0" x2="1080" y2="0" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+    
+    <g transform="translate(0, 30)">
+      <text class="sans-track" x="0" y="0" font-size="9" fill="#9C9485">CORE PLATFORM</text>
+      <text class="sans-track" x="0" y="18" font-size="11" font-weight="600" fill="#141210">SATVIK</text>
+    </g>
+
+    <g transform="translate(240, 30)">
+      <text class="sans-track" x="0" y="0" font-size="9" fill="#9C9485">FOUNDATION &amp; STACK</text>
+      <text class="sans-track" x="0" y="18" font-size="11" font-weight="600" fill="#9A722C">JAVASCRIPT &#8226; WEBAR / VR &#8226; 3D KIOSK PLATFORM &#8226; TIET ELC</text>
+    </g>
+
+    <g transform="translate(900, 30)">
+      <text class="sans-track" x="180" y="0" font-size="9" fill="#9C9485" text-anchor="end">DEPLOYMENT</text>
+      <text class="sans-track" x="180" y="18" font-size="11" font-weight="600" fill="#141210" text-anchor="end">CAMPUS WEB KIOSK</text>
+    </g>
+
+    <text class="sans-track" x="540" y="80" font-size="9.5" fill="#9A722C" text-anchor="middle">
+      VIEW REPOSITORY &#8226; GITHUB.COM/SATVIK-4WEB/CAMPUS-VERSE &#8599;
+    </text>
+  </g>
+</svg>

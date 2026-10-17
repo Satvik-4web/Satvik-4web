@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="700" role="img" aria-label="End Credits: rolling credits of technologies, languages, frameworks, data, ML, and tools">
+  <title>End Credits — Production Stack</title>
+  <defs>
+    
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9A722C"/>
+      <stop offset="50%" stop-color="#BA8E3D"/>
+      <stop offset="100%" stop-color="#9A722C"/>
+    </linearGradient>
+
+    <linearGradient id="flareGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0"/>
+      <stop offset="30%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="rgba(186, 142, 61, 0.6)" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="fadeMaskGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Subtle filmic grain -->
+    <filter id="filmGrain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="2" result="noise"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.025 0"/>
+    </filter>
+  
+    <mask id="creditsFadeMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="700">
+      <rect x="0" y="0" width="1200" height="700" fill="url(#fadeMaskGrad)"/>
+    </mask>
+  </defs>
+
+  <style>
+    .sans-track {
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+    }
+    .serif-credit {
+      font-family: ui-serif, "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      fill: #141210;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .credits-roll {
+        animation: scrollUp 32s linear infinite;
+      }
+      .static-credits {
+        display: none;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .credits-roll {
+        display: none;
+      }
+      .static-credits {
+        display: block;
+      }
+    }
+    @keyframes scrollUp {
+      0%   { transform: translateY(580px); }
+      100% { transform: translateY(-780px); }
+    }
+  </style>
+
+  
+    <!-- Letterbox Base Surface -->
+    <rect width="1200" height="700" fill="#F6F1E9"/>
+
+    <!-- Top & Bottom Cinematic Letterbox Bars -->
+    <rect x="0" y="0" width="1200" height="49" fill="#EAE3D6"/>
+    <rect x="0" y="651" width="1200" height="49" fill="#EAE3D6"/>
+    <line x1="0" y1="49" x2="1200" y2="49" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+    <line x1="0" y1="651" x2="1200" y2="651" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+
+    <!-- Inset Hairline Frame -->
+    <rect x="24" y="24" width="1152" height="652" fill="none" stroke="rgba(154, 114, 44, 0.45)" stroke-width="1"/>
+
+    <!-- Corner Registration Marks -->
+    <!-- Top-Left -->
+    <path d="M 16 24 L 32 24 M 24 16 L 24 32" stroke="#9A722C" stroke-width="1"/>
+    <!-- Top-Right -->
+    <path d="M 1168 24 L 1184 24 M 1176 16 L 1176 32" stroke="#9A722C" stroke-width="1"/>
+    <!-- Bottom-Left -->
+    <path d="M 16 676 L 32 676 M 24 668 L 24 684" stroke="#9A722C" stroke-width="1"/>
+    <!-- Bottom-Right -->
+    <path d="M 1168 676 L 1184 676 M 1176 668 L 1176 684" stroke="#9A722C" stroke-width="1"/>
+
+    <!-- Subtle Film Grain Overlay -->
+    <rect width="1200" height="700" filter="url(#filmGrain)" pointer-events="none"/>
+  
+
+  <!-- Fixed Header -->
+  <g transform="translate(0, 0)">
+    <text class="sans-track" x="600" y="70" font-size="9.5" fill="#9C9485" text-anchor="middle">SYSTEM ARCHITECTURE &#8226; FULL TECHNICAL CAST</text>
+    <path d="M423.24 110.00 L438.27 110.00 C438.68 110.00 438.78 109.86 438.78 109.49 C438.78 107.96 438.95 105.99 439.12 104.66 C439.12 104.56 438.74 104.46 438.71 104.59 C437.72 107.65 435.65 109.05 432.11 109.05 L430.99 109.05 C429.90 109.05 429.43 108.44 429.43 107.11 L429.43 99.43 L432.22 99.43 C434.94 99.43 436.36 100.58 436.36 102.42 C436.36 102.52 436.77 102.52 436.77 102.42 C436.77 101.13 436.67 100.11 436.67 98.95 L436.70 95.89 C436.70 95.75 436.33 95.75 436.33 95.89 C436.33 97.49 434.94 98.47 432.25 98.47 L429.43 98.47 L429.43 91.54 C429.43 90.31 430.04 89.74 431.40 89.74 L432.42 89.74 C435.24 89.74 436.91 90.96 437.66 93.61 C437.72 93.75 438.06 93.68 438.06 93.58 L438.00 89.06 C438.00 88.85 437.93 88.75 437.66 88.75 L423.24 88.75 C423.10 88.75 423.10 89.16 423.24 89.16 C425.31 89.16 425.65 89.57 425.65 91.50 L425.65 107.25 C425.65 109.22 425.31 109.59 423.24 109.59 C423.10 109.59 423.10 110.00 423.24 110.00 M458.93 105.68 C458.93 108.10 457.67 109.59 455.70 109.59 C455.57 109.59 455.57 110.00 455.70 110.00 L459.48 109.93 C460.73 109.93 461.79 110.00 462.77 110.00 C462.88 110.00 462.88 109.59 462.77 109.59 C461.01 109.59 459.95 108.10 459.95 105.68 L459.95 92.46 L475.90 110.61 C475.97 110.68 476.27 110.65 476.27 110.51 L476.27 93.10 C476.27 90.69 477.39 89.16 479.20 89.16 C479.30 89.16 479.30 88.75 479.20 88.75 C478.21 88.75 476.99 88.85 475.76 88.85 C474.50 88.85 473.45 88.75 472.46 88.75 C472.36 88.75 472.36 89.16 472.46 89.16 C474.23 89.16 475.29 90.69 475.29 93.10 L475.29 104.08 L463.52 90.52 C462.43 89.23 462.40 88.75 461.82 88.75 C461.11 88.75 459.71 88.82 458.08 88.82 L455.36 88.75 C455.26 88.75 455.26 89.16 455.36 89.16 C456.45 89.16 457.40 89.60 458.93 91.30 M504.69 110.14 C510.77 110.14 515.91 105.82 515.91 99.02 C515.91 93.17 511.25 88.68 504.21 88.68 C502.82 88.68 500.64 88.85 498.98 88.85 C497.34 88.85 495.88 88.75 494.69 88.75 C494.56 88.75 494.56 89.16 494.69 89.16 C496.73 89.16 497.11 89.57 497.11 91.50 L497.11 107.25 C497.11 109.22 496.70 109.59 494.62 109.59 C494.52 109.59 494.52 110.00 494.62 110.00 L498.98 109.93 C500.78 109.93 503.23 110.14 504.69 110.14 M504.35 109.35 C501.49 109.35 500.88 108.57 500.88 106.87 L500.88 91.57 C500.88 89.74 501.90 89.43 504.55 89.43 C508.94 89.43 511.73 93.99 511.73 99.77 C511.73 105.99 508.63 109.35 504.35 109.35  M568.05 88.38 C560.77 88.38 555.20 92.97 555.20 99.53 C555.20 105.95 560.50 110.41 567.84 110.41 C569.78 110.41 571.99 110.07 574.17 109.29 C574.58 109.12 574.61 109.05 574.68 108.50 L575.19 104.29 C575.19 104.15 574.88 104.08 574.81 104.22 C572.94 108.03 571.04 109.69 567.84 109.69 C562.95 109.69 559.48 105.68 559.48 99.29 C559.48 92.97 562.88 89.09 567.50 89.09 C570.84 89.09 573.22 91.16 574.47 94.84 C574.58 95.01 574.88 94.94 574.88 94.80 L574.44 90.08 C574.41 89.60 574.34 89.43 573.93 89.29 C572.57 88.72 570.09 88.38 568.05 88.38 M608.70 110.00 L614.76 110.00 C614.86 110.00 614.86 109.59 614.76 109.59 C612.07 109.59 609.38 106.67 604.15 98.78 C606.32 97.62 607.89 95.55 607.89 92.97 C607.89 90.25 605.54 88.65 601.39 88.65 C599.80 88.65 597.89 88.85 596.40 88.85 C594.76 88.85 593.30 88.75 592.11 88.75 C592.01 88.75 592.01 89.16 592.11 89.16 C594.19 89.16 594.53 89.57 594.53 91.50 L594.53 107.25 C594.53 109.22 594.15 109.59 592.08 109.59 C591.94 109.59 591.94 110.00 592.08 110.00 C593.27 110.00 594.76 109.93 596.40 109.93 C598.13 109.93 599.56 110.00 600.75 110.00 C600.85 110.00 600.85 109.59 600.75 109.59 C598.64 109.59 598.33 109.22 598.33 107.25 L598.33 99.73 L600.20 99.77 C600.48 99.77 600.71 99.77 600.99 99.73 C604.83 106.23 607.68 110.00 608.70 110.00 M604.01 94.26 C604.01 97.52 602.96 98.92 600.31 98.92 C599.76 98.92 598.95 98.88 598.33 98.78 L598.33 91.57 C598.33 90.01 599.05 89.36 600.85 89.36 C602.69 89.36 604.01 90.25 604.01 94.26 M629.81 110.00 L644.84 110.00 C645.25 110.00 645.35 109.86 645.35 109.49 C645.35 107.96 645.52 105.99 645.69 104.66 C645.69 104.56 645.31 104.46 645.28 104.59 C644.29 107.65 642.22 109.05 638.68 109.05 L637.56 109.05 C636.47 109.05 636.00 108.44 636.00 107.11 L636.00 99.43 L638.79 99.43 C641.51 99.43 642.93 100.58 642.93 102.42 C642.93 102.52 643.34 102.52 643.34 102.42 C643.34 101.13 643.24 100.11 643.24 98.95 L643.27 95.89 C643.27 95.75 642.90 95.75 642.90 95.89 C642.90 97.49 641.51 98.47 638.82 98.47 L636.00 98.47 L636.00 91.54 C636.00 90.31 636.61 89.74 637.97 89.74 L638.99 89.74 C641.81 89.74 643.48 90.96 644.23 93.61 C644.29 93.75 644.63 93.68 644.63 93.58 L644.57 89.06 C644.57 88.85 644.50 88.75 644.23 88.75 L629.81 88.75 C629.67 88.75 629.67 89.16 629.81 89.16 C631.88 89.16 632.22 89.57 632.22 91.50 L632.22 107.25 C632.22 109.22 631.88 109.59 629.81 109.59 C629.67 109.59 629.67 110.00 629.81 110.00 M672.27 110.14 C678.35 110.14 683.49 105.82 683.49 99.02 C683.49 93.17 678.83 88.68 671.79 88.68 C670.40 88.68 668.22 88.85 666.56 88.85 C664.92 88.85 663.46 88.75 662.27 88.75 C662.14 88.75 662.14 89.16 662.27 89.16 C664.31 89.16 664.69 89.57 664.69 91.50 L664.69 107.25 C664.69 109.22 664.28 109.59 662.20 109.59 C662.10 109.59 662.10 110.00 662.20 110.00 L666.56 109.93 C668.36 109.93 670.81 110.14 672.27 110.14 M671.93 109.35 C669.07 109.35 668.46 108.57 668.46 106.87 L668.46 91.57 C668.46 89.74 669.48 89.43 672.13 89.43 C676.52 89.43 679.31 93.99 679.31 99.77 C679.31 105.99 676.21 109.35 671.93 109.35 M706.87 107.25 L706.87 91.57 C706.87 89.63 707.21 89.16 709.29 89.16 C709.42 89.16 709.42 88.75 709.29 88.75 C708.13 88.75 706.67 88.85 704.93 88.85 C703.30 88.85 701.77 88.75 700.58 88.75 C700.48 88.75 700.48 89.16 700.58 89.16 C702.66 89.16 703.06 89.57 703.06 91.50 L703.06 107.25 C703.06 109.22 702.66 109.59 700.58 109.59 C700.48 109.59 700.48 110.00 700.58 110.00 L704.93 109.93 C706.67 109.93 708.10 110.00 709.29 110.00 C709.42 110.00 709.42 109.59 709.29 109.59 C707.18 109.59 706.87 109.22 706.87 107.25 M732.33 89.53 C733.62 89.53 733.89 90.01 733.89 91.50 L733.89 107.25 C733.89 109.22 733.42 109.59 731.04 109.59 C730.90 109.59 730.90 110.00 731.04 110.00 C732.33 110.00 733.96 109.93 735.76 109.93 C737.67 109.93 739.23 110.00 740.52 110.00 C740.66 110.00 740.66 109.59 740.52 109.59 C738.08 109.59 737.70 109.22 737.70 107.25 L737.70 91.57 C737.70 90.01 737.97 89.53 739.33 89.53 C741.99 89.53 743.99 91.20 744.67 94.77 C744.71 94.90 745.05 94.90 745.05 94.77 C745.05 93.61 745.22 89.40 745.39 87.90 C745.39 87.73 745.01 87.73 744.98 87.90 C744.74 88.61 743.96 88.75 742.33 88.75 C740.56 88.75 738.93 88.85 735.76 88.85 C733.21 88.85 730.87 88.82 728.93 88.75 C728.28 88.75 726.99 88.68 726.99 88.00 C726.99 87.76 726.62 87.80 726.62 88.00 C726.62 89.67 726.28 93.51 726.14 94.77 C726.14 94.90 726.48 94.94 726.52 94.80 C727.64 91.47 729.54 89.53 732.33 89.53 M766.56 92.18 C766.56 90.11 767.95 89.12 769.65 89.12 C773.29 89.12 774.55 93.78 775.09 94.90 C775.16 95.04 775.47 94.94 775.47 94.80 L775.47 89.80 C775.47 89.53 775.40 89.33 774.96 89.12 C774.01 88.72 772.20 88.38 770.57 88.38 C767.17 88.38 763.43 90.04 763.43 93.85 C763.43 96.88 765.78 98.37 768.16 99.94 C770.57 101.53 773.05 103.13 773.05 106.33 C773.05 108.88 771.49 109.56 769.93 109.56 C766.70 109.56 764.93 105.78 763.53 102.93 C763.47 102.76 763.13 102.79 763.16 103.00 L763.26 108.40 C763.26 108.81 763.40 108.91 763.60 109.05 C764.38 109.73 767.00 110.41 769.04 110.41 C773.22 110.41 776.39 107.96 776.39 104.36 C776.39 101.09 773.77 99.39 771.22 97.76 C768.84 96.23 766.56 94.77 766.56 92.18" fill="#9A722C"/>
+    <line x1="480" y1="126" x2="720" y2="126" stroke="rgba(154, 114, 44, 0.18)" stroke-width="1"/>
+  </g>
+
+  <!-- Rolling Credits with Top/Bottom Gradient Mask -->
+  <g mask="url(#creditsFadeMask)">
+    <g transform="translate(600, 0)">
+      <g class="credits-roll">
+      
+      <!-- Group 1: LANGUAGES -->
+      <g transform="translate(0, 0)">
+        <text class="sans-track" x="0" y="0" font-size="10" font-weight="600" fill="#9A722C" text-anchor="middle">&#8212; LANGUAGES &#8212;</text>
+        <text class="serif-credit" x="0" y="32" text-anchor="middle">PYTHON</text>
+        <text class="serif-credit" x="0" y="58" text-anchor="middle">TYPESCRIPT</text>
+        <text class="serif-credit" x="0" y="84" text-anchor="middle">JAVASCRIPT</text>
+        <text class="serif-credit" x="0" y="110" text-anchor="middle">C++</text>
+        <text class="serif-credit" x="0" y="136" text-anchor="middle">PHP</text>
+        <text class="serif-credit" x="0" y="162" text-anchor="middle">C#</text>
+      </g>
+
+      <!-- Group 2: FRAMEWORKS -->
+      <g transform="translate(0, 230)">
+        <text class="sans-track" x="0" y="0" font-size="10" font-weight="600" fill="#9A722C" text-anchor="middle">&#8212; FRAMEWORKS &amp; PLATFORMS &#8212;</text>
+        <text class="serif-credit" x="0" y="32" text-anchor="middle">NEXT.JS 14</text>
+        <text class="serif-credit" x="0" y="58" text-anchor="middle">REACT</text>
+        <text class="serif-credit" x="0" y="84" text-anchor="middle">NODE.JS</text>
+        <text class="serif-credit" x="0" y="110" text-anchor="middle">LARAVEL</text>
+        <text class="serif-credit" x="0" y="136" text-anchor="middle">EXPRESS</text>
+        <text class="serif-credit" x="0" y="162" text-anchor="middle">TAILWIND CSS</text>
+      </g>
+
+      <!-- Group 3: DATA -->
+      <g transform="translate(0, 460)">
+        <text class="sans-track" x="0" y="0" font-size="10" font-weight="600" fill="#9A722C" text-anchor="middle">&#8212; DATA &amp; STORAGE &#8212;</text>
+        <text class="serif-credit" x="0" y="32" text-anchor="middle">POSTGRESQL</text>
+        <text class="serif-credit" x="0" y="58" text-anchor="middle">SUPABASE REALTIME</text>
+        <text class="serif-credit" x="0" y="84" text-anchor="middle">UPSTASH REDIS</text>
+        <text class="serif-credit" x="0" y="110" text-anchor="middle">ORACLE DATABASE</text>
+        <text class="serif-credit" x="0" y="136" text-anchor="middle">SQLITE</text>
+      </g>
+
+      <!-- Group 4: MACHINE LEARNING & AI -->
+      <g transform="translate(0, 660)">
+        <text class="sans-track" x="0" y="0" font-size="10" font-weight="600" fill="#9A722C" text-anchor="middle">&#8212; MACHINE LEARNING &amp; AI &#8212;</text>
+        <text class="serif-credit" x="0" y="32" text-anchor="middle">SCIKIT-LEARN</text>
+        <text class="serif-credit" x="0" y="58" text-anchor="middle">NUMPY &amp; PANDAS</text>
+        <text class="serif-credit" x="0" y="84" text-anchor="middle">LLM APIS</text>
+        <text class="serif-credit" x="0" y="110" text-anchor="middle">RAG ARCHITECTURES</text>
+        <text class="serif-credit" x="0" y="136" text-anchor="middle">VECTOR SEARCH</text>
+      </g>
+
+      <!-- Group 5: TOOLS -->
+      <g transform="translate(0, 860)">
+        <text class="sans-track" x="0" y="0" font-size="10" font-weight="600" fill="#9A722C" text-anchor="middle">&#8212; PRODUCTION TOOLS &#8212;</text>
+        <text class="serif-credit" x="0" y="32" text-anchor="middle">GIT &amp; GITHUB ACTIONS</text>
+        <text class="serif-credit" x="0" y="58" text-anchor="middle">DOCKER</text>
+        <text class="serif-credit" x="0" y="84" text-anchor="middle">POSTMAN</text>
+        <text class="serif-credit" x="0" y="110" text-anchor="middle">VS CODE</text>
+        <text class="serif-credit" x="0" y="136" text-anchor="middle">LINUX / BASH</text>
+      </g>
+
+      <!-- Final Credit Badge -->
+      <g transform="translate(0, 1070)">
+        <text class="sans-track" x="0" y="0" font-size="9" fill="#9C9485" text-anchor="middle">CO-FOUNDER &amp; CTO &#8226; DEV AGENCY</text>
+        <text class="sans-track" x="0" y="24" font-size="10" font-weight="600" fill="#9A722C" text-anchor="middle">THAPAR INSTITUTE &#8226; CLASS OF 2028</text>
+      </g>
+    </g>
+  </g>
+</g>
+
+  <!-- Static Fallback for Reduced Motion -->
+  <g class="static-credits" transform="translate(100, 170)">
+    <g transform="translate(0, 0)">
+      <text class="sans-track" x="0" y="0" font-size="9" font-weight="600" fill="#9A722C">LANGUAGES</text>
+      <text class="sans-track" x="0" y="24" font-size="8.5" fill="#141210">PYTHON &#8226; TS &#8226; JS &#8226; C++ &#8226; PHP &#8226; C#</text>
+    </g>
+    <g transform="translate(0, 60)">
+      <text class="sans-track" x="0" y="0" font-size="9" font-weight="600" fill="#9A722C">FRAMEWORKS</text>
+      <text class="sans-track" x="0" y="24" font-size="8.5" fill="#141210">NEXT.JS 14 &#8226; REACT &#8226; NODE &#8226; LARAVEL &#8226; TAILWIND</text>
+    </g>
+    <g transform="translate(0, 120)">
+      <text class="sans-track" x="0" y="0" font-size="9" font-weight="600" fill="#9A722C">DATA &amp; STORAGE</text>
+      <text class="sans-track" x="0" y="24" font-size="8.5" fill="#141210">POSTGRES &#8226; SUPABASE &#8226; REDIS &#8226; ORACLE &#8226; SQLITE</text>
+    </g>
+    <g transform="translate(0, 180)">
+      <text class="sans-track" x="0" y="0" font-size="9" font-weight="600" fill="#9A722C">MACHINE LEARNING</text>
+      <text class="sans-track" x="0" y="24" font-size="8.5" fill="#141210">SCIKIT-LEARN &#8226; PANDAS &#8226; NUMPY &#8226; LLM APIS &#8226; RAG</text>
+    </g>
+    <g transform="translate(0, 240)">
+      <text class="sans-track" x="0" y="0" font-size="9" font-weight="600" fill="#9A722C">PRODUCTION TOOLS</text>
+      <text class="sans-track" x="0" y="24" font-size="8.5" fill="#141210">GIT &#8226; ACTIONS &#8226; DOCKER &#8226; POSTMAN &#8226; VS CODE</text>
+    </g>
+  </g>
+</svg>
